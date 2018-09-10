@@ -4,14 +4,14 @@
 Text::Text(PointerBag* pointerBag, std::string text, Font* font) : pointerBag(pointerBag), textString(text), font(font)
 {
 	this->renderer = pointerBag->GetRenderer();
+	this->activeCaching = false;
+	this->bestQuality = true; // default
 }
 
 void Text::Create(float x, float y, SDL_Color color)
 {
 	textColor = color;
-	positionX = x;
-	positionY = y;
-
+	SetPosition(x, y);
 	UpdateTexture();
 }
 
@@ -24,15 +24,50 @@ void Text::Destroy()
 void Text::Render()
 {
 	if (renderer && texture)
-	{
 		SDL_RenderCopy(renderer, texture, NULL, &dest);
-	}
+}
+
+void Text::SetPosition(float x, float y)
+{
+	posX = x;
+	posY = y;
+	dest.x = (int)x;
+	dest.y = (int)y;
+}
+
+void Text::SetString(std::string newString)
+{
+	textString = newString;
+	UpdateTexture();
+}
+
+void Text::SetColor(SDL_Color newColor)
+{
+	textColor = newColor;
+	UpdateTexture();
+}
+
+void Text::SetColor(int r, int g, int b, int a)
+{
+	SetColor(SDL_Color { ClampUint8(r), ClampUint8(g), ClampUint8(b), ClampUint8(a) } );
+}
+
+void Text::SetColorNormalized(float r, float g, float b, float a)
+{
+	r = ClampFloat(r, 0.0f, 1.0f);
+	g = ClampFloat(g, 0.0f, 1.0f);
+	b = ClampFloat(b, 0.0f, 1.0f);
+	a = ClampFloat(a, 0.0f, 1.0f);
+	SetColor(SDL_Color{ (Uint8)r, (Uint8)g, (Uint8)b , (Uint8)a });
 }
 
 bool Text::UpdateTexture()
 {
 	if (texture)
 		SDL_DestroyTexture(texture);
+
+	if (activeCaching)
+		return true; // Success!
 
 	// Render text surface
 	SDL_Surface* textSurface = TTF_RenderText_Solid(font->GetFont(), textString.c_str(), textColor);
@@ -53,14 +88,8 @@ bool Text::UpdateTexture()
 		else
 		{
 			// Get image dimensions
-			textureWidth = textSurface->w;
-			textureHeight = textSurface->h;
-
-			// Update
-			dest.x = (int)positionX;
-			dest.y = (int)positionY;
-			dest.w = textureWidth;
-			dest.h = textureHeight;
+			dest.w = textSurface->w;
+			dest.h = textSurface->h;
 		}
 
 		//Get rid of old surface
@@ -68,4 +97,26 @@ bool Text::UpdateTexture()
 	}
 
 	return true; // Success!
+}
+
+Uint8 Text::ClampUint8(int value)
+{
+	if (value < 0) value = 0;
+	if (value > 255) value = 255;
+	return value;
+}
+
+float Text::ClampFloat(float value, float min, float max)
+{
+	if (value < min) value = min;
+	if (value > max) value = max;
+	return value;
+}
+
+void Text::UpdateTextureExplicit()
+{
+	bool tempActiveCache = activeCaching;
+	activeCaching = false;
+	UpdateTexture();
+	activeCaching = tempActiveCache;
 }

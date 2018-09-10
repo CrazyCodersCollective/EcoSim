@@ -3,6 +3,8 @@
 #include "PointerBag.h"
 #include "SDL_ImageLoader.h"
 
+#include <stdlib.h> // rand()
+
 void Game::StartUp()
 {
 	std::string texturePath = "Resource/Textures/testObject.png";
@@ -45,6 +47,21 @@ void Game::HandleEvent(SDL_Event& event)
 
 void Game::Update()
 {
+	// TODO(kim): remove test code
+	bool fastUpdate = true;
+	if (fastUpdate)
+	{
+		testText->SetCachingMode(false);
+		testText->SetColor(SDL_Color{ (Uint8)(rand() % 255), (Uint8)(rand() % 255) , (Uint8)(rand() % 255) , (Uint8)(rand() % 255) });
+		testText->SetPosition((float)(rand() % 500), (float)(rand() % 500));
+		testText->UpdateTextureExplicit();
+	}
+	else
+	{
+		testText->SetCachingMode(true);
+		testText->SetColor(SDL_Color{ (Uint8)(rand() % 255), (Uint8)(rand() % 255) , (Uint8)(rand() % 255) , (Uint8)(rand() % 255) });
+		testText->SetPosition((float)(rand() % 500), (float)(rand() % 500));
+	}
 }
 
 void Game::Render()

@@ -15,27 +15,39 @@ public:
 
 	void Render();
 
-	// TODOs(kim):
-	// void SetPosition(..)
-	// void SetString(..)
-	// void SetColor(..)
-	// void SetQuality(..)
+	void SetPosition(float x, float y);
+	void SetString(std::string newString);
+	void SetColor(SDL_Color newColor);
+	void SetColor(int r, int g, int b, int a);
+	void SetColorNormalized(float r, float g, float b, float a);
+	
+	// With caching off we have to explicitly update the texture.
+	void SetCachingMode(bool active) { activeCaching = active; }
+	void UpdateTextureExplicit(); // Regardless to what texture caching is set to.
+
+	// Text quality mode
+	void SetQualityMode(bool best) { bestQuality = best; } // true: best quality and slow (default), false: quick and dirty
 
 private:
 	PointerBag* pointerBag;
 	SDL_Renderer* renderer; // quick lookup
 
 	Font* font;
+	bool activeCaching;
+	
+	/* Text string */
 	SDL_Color textColor;
-	SDL_Texture* texture;
-	int textureWidth;
-	int textureHeight;
 	std::string textString;
-	float positionX;
-	float positionY;
+	bool bestQuality;
+	float posX;
+	float posY;
 
+	/* Texture */
+	SDL_Texture* texture;
+	SDL_Rect dest;
 	bool UpdateTexture();
 
-	//
-	SDL_Rect dest;
+	/* Util stuff*/
+	Uint8 ClampUint8(int value);
+	float ClampFloat(float value, float min, float max);
 };
