@@ -70,7 +70,11 @@ bool Text::UpdateTexture()
 		return true; // Success!
 
 	// Render text surface
-	SDL_Surface* textSurface = TTF_RenderText_Solid(font->GetFont(), textString.c_str(), textColor);
+	SDL_Surface* textSurface;
+	if (bestQuality)
+		textSurface = TTF_RenderUTF8_Blended(font->GetFont(), textString.c_str(), textColor);
+	else
+		textSurface = TTF_RenderText_Solid(font->GetFont(), textString.c_str(), textColor);
 	if (textSurface == NULL)
 	{
 		printf("ERROR: Unable to render text surface! SDL_ttf Error: %s\n", TTF_GetError());

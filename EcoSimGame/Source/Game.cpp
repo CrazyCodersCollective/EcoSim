@@ -51,14 +51,14 @@ void Game::Update()
 	bool fastUpdate = true;
 	if (fastUpdate)
 	{
-		testText->SetCachingMode(false);
+		testText->SetCachingMode(true);
 		testText->SetColor(SDL_Color{ (Uint8)(rand() % 255), (Uint8)(rand() % 255) , (Uint8)(rand() % 255) , (Uint8)(rand() % 255) });
 		testText->SetPosition((float)(rand() % 500), (float)(rand() % 500));
 		testText->UpdateTextureExplicit();
 	}
 	else
 	{
-		testText->SetCachingMode(true);
+		testText->SetCachingMode(false);
 		testText->SetColor(SDL_Color{ (Uint8)(rand() % 255), (Uint8)(rand() % 255) , (Uint8)(rand() % 255) , (Uint8)(rand() % 255) });
 		testText->SetPosition((float)(rand() % 500), (float)(rand() % 500));
 	}
