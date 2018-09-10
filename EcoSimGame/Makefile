@@ -1,13 +1,32 @@
+SOURCE_DIR = Source
+INCLUDE_DIR = Source
+OBJ_DIR = Source
+LIB_DIR = unix/lib
+BUILD_DIR = GameRoot
+BUILD_FILE = EcoSimGame
+LIBS = -lSDL2 -lSDL2_image -lSDL2_ttf
+CXXFLAGS = -I/usr/include/SDL2 -I$(INCLUDE_DIR)
 
-all:
-	c++ -o GameRoot/EcoSimGame -I/usr/include/SDL2 Source/Font.cpp \
-		Source/Font_Subsystem.cpp Source/Game.cpp \
-		Source/Image_Subsystem.cpp Source/main.cpp \
-		Source/SDL_Subsystem.cpp Source/Subsystems.cpp \
-		-lSDL2 -lSDL2_image -lSDL2_ttf
+DEPS =$(wildcard $(INCLUDE_DIR)/*.h)
+
+SRC_FILES = $(wildcard $(SOURCE_DIR)/*.cpp)
+OBJ_FILES = $(SRC_FILES:.cpp=.o)
+
+$(BUILD_DIR)/$(BUILD_FILE): $(OBJ_FILES)
+	$(CXX) -o $(BUILD_DIR)/$(BUILD_FILE) -L$(LIB_DIR) $^ $(LIBS)
+
+
+$(OBJ_DIR)/%.o: $(SOURCE_DIR)/%.cpp  # $(DEPS)
+	$(CXX) -c -o $@ $^ $(CXXFLAGS)
+
+.PHONY: clean
 
 clean:
-	rm GameRoot/EcoSimGame Font.o Font_Subsystem.o Game.o \
-		Image_Subsystem.o main.o SDL_Subsystem.o Subsystems.o
+	rm -f $(OBJ_DIR)/*.o $(BUILD_DIR)/$(BUILD_FILE)
 
 
+# for testing variables in this Makefile
+debug:
+	echo $(SRC_FILES) # ok
+	echo $(OBJ_FILES)  # ok
+	echo $(DEPS) # ok
