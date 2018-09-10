@@ -84,22 +84,29 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Application.cpp" />
     <ClCompile Include="Font.cpp" />
     <ClCompile Include="Font_Subsystem.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="GameEngine.cpp" />
     <ClCompile Include="Image_Subsystem.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SDL_Subsystem.cpp" />
     <ClCompile Include="Subsystems.cpp" />
+    <ClCompile Include="Text.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Application.h" />
     <ClInclude Include="Font.h" />
     <ClInclude Include="Font_Subsystem.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="GameEngine.h" />
     <ClInclude Include="Image_Subsystem.h" />
+    <ClInclude Include="PointerBag.h" />
     <ClInclude Include="SDL_ImageLoader.h" />
     <ClInclude Include="SDL_Subsystem.h" />
     <ClInclude Include="Subsystems.h" />
+    <ClInclude Include="Text.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

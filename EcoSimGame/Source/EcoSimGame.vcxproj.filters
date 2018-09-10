@@ -33,6 +33,15 @@
     <ClCompile Include="Image_Subsystem.cpp">
       <Filter>Source\Subsystems</Filter>
     </ClCompile>
+    <ClCompile Include="Application.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="GameEngine.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Text.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h">
@@ -55,6 +64,18 @@
     </ClInclude>
     <ClInclude Include="SDL_ImageLoader.h">
       <Filter>Source\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="Application.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="PointerBag.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="GameEngine.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Text.h">
+      <Filter>Source</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -1,68 +1,58 @@
 #include "Game.h"
 #include <string>
-#include <stdio.h>
-#include "Subsystems.h"
+#include "PointerBag.h"
 #include "SDL_ImageLoader.h"
 
-void Game::init() {
-	isRunning = true;
-
-	Subsystems::Initialize();
-
-	window = SDL_CreateWindow("EcoSim", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 800, 600, 0); // See SDL_WindowFlags for more info.
-	if (!window) {
-		printf("ERROR: Could not create window: %s\n", SDL_GetError());
-		isRunning = false;
-		return; // Failed!
-	}
-
-	renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC | SDL_RENDERER_TARGETTEXTURE);
-	if (!renderer) {
-		printf("ERROR: Could not create renderer: %s\n", SDL_GetError());
-		isRunning = false;
-		return; // False;
-	}
-}
-
-void Game::loadResources()
+void Game::StartUp()
 {
 	std::string texturePath = "Resource/Textures/testObject.png";
 	testObject = SDL_ImageLoader_LoadTexture(renderer, (char*)texturePath.c_str());
 	if (!testObject) {
-		isRunning = false;
+		pointerBag.isRunning = false;
 		return; // Failed!
 	}
+
+	testFont = new Font();
+	testFont->LoadFont("Resource/Fonts/monogram.ttf", 28);
+
+	testText = new Text(&pointerBag, "Hello world!", testFont);
+	testText->Create(200, 300, SDL_Color{ 255,0,0,255 });
 }
 
-void Game::update() {
+void Game::Shutdown()
+{
+	if(testObject)
+		SDL_DestroyTexture(testObject);
+
+	if (testText)
+		testText->Destroy();
+
+	if (testFont)
+		testFont->FreeFont();
 }
 
-void Game::events() {
-	SDL_Event event;
-	while (SDL_PollEvent(&event)) {
-		switch (event.type) {
-			//processing events
-			case (SDL_QUIT): {
-				isRunning = false;
-			} break;
-			case (SDL_KEYDOWN): {
-				printf("key pressed\n");
-				if (event.key.keysym.sym == SDLK_ESCAPE) {
-					isRunning = false;
-				}
-			} break;
-		}
+void Game::HandleEvent(SDL_Event& event)
+{
+	switch (event.type)
+	{
+		case (SDL_KEYDOWN):
+		{
+			if (event.key.keysym.sym == SDLK_ESCAPE)
+				pointerBag.isRunning = false;
+		} break;
 	}
 }
 
-void Game::display() {
-	SDL_RenderClear(renderer);
-	SDL_RenderCopy(renderer, testObject, NULL, NULL);
-	SDL_RenderPresent(renderer);
+void Game::Update()
+{
 }
 
-void Game::quit() {
-	SDL_DestroyWindow(window);
+void Game::Render()
+{
+	// Should we bother with checking? OK wasting CPU cycles?
+	if(testObject)
+		SDL_RenderCopy(renderer, testObject, NULL, NULL);
 
-	Subsystems::Shutdown();
+	// Let us draw some text
+	testText->Render();
 }

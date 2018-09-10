@@ -1,24 +1,25 @@
 #pragma once
 #include <SDL.h>
+#include "GameEngine.h"
+#include "Font.h"
+#include "Text.h"
 
-class Game
+class Game : public GameEngine
 {
 public:
 	Game() {}
 	virtual ~Game() {}
-
-	void init();
-	void loadResources();
-	void update();
-	void events();
-	void display();
-	void quit();
-
-	bool isRunning;
-
+	
 private:
-	SDL_Window* window;
-	SDL_Renderer* renderer;
+	/* GameEngine */
+	void StartUp();
+	void Shutdown();
+	void HandleEvent(SDL_Event& event);
+	void Update();
+	void Render();
 
+	/* Game stuffs */
 	SDL_Texture* testObject;
+	Font* testFont;
+	Text* testText;
 };
