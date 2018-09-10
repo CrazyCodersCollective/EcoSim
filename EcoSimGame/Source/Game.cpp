@@ -1,16 +1,13 @@
 #include "Game.h"
 #include <string>
 #include <stdio.h>
+#include "Subsystems.h"
 #include "SDL_ImageLoader.h"
 
 void Game::init() {
 	isRunning = true;
 
-	if (SDL_Init(SDL_INIT_EVERYTHING)) {
-		printf("ERROR: Unable to initialize SDL: %s", SDL_GetError());
-		isRunning = false;
-		return; // Failed!
-	}
+	Subsystems::Initialize();
 
 	window = SDL_CreateWindow("EcoSim", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 800, 600, 0); // See SDL_WindowFlags for more info.
 	if (!window) {
@@ -66,5 +63,6 @@ void Game::display() {
 
 void Game::quit() {
 	SDL_DestroyWindow(window);
-	SDL_Quit();
+
+	Subsystems::Shutdown();
 }
