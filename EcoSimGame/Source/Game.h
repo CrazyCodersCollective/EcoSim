@@ -1,8 +1,10 @@
 #pragma once
 #include <SDL.h>
 #include "GameEngine.h"
-#include "Font.h"
-#include "Text.h"
+
+// AppStates
+#include "Title_AppState.h"
+#include "Game_AppState.h"
 
 class Game : public GameEngine
 {
@@ -11,15 +13,11 @@ public:
 	virtual ~Game() {}
 	
 private:
-	/* GameEngine */
-	void StartUp();
-	void Shutdown();
-	void HandleEvent(SDL_Event& event);
-	void Update();
-	void Render();
+	void Setup()
+	{
+		appFSM->AddState(new Title_AppState(appFSM->GetPointerBag()));
+		appFSM->AddState(new Game_AppState(appFSM->GetPointerBag()));
 
-	/* Game stuffs */
-	SDL_Texture* testObject;
-	Font* testFont;
-	Text* testText;
+		appFSM->ChangeState("Title");
+	}
 };

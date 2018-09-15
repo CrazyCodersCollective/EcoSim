@@ -4,78 +4,123 @@
     <Filter Include="Source">
       <UniqueIdentifier>{478092ec-3fd1-4a81-99cd-91c5dddcdd80}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source\Subsystems">
-      <UniqueIdentifier>{b544858b-31d2-447f-a9d7-836053a4d9b3}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source\Helpers">
       <UniqueIdentifier>{0d29ffba-872d-4cf4-b4ce-6ff95c728735}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Engine">
+      <UniqueIdentifier>{bcdd2d95-3ac8-4d33-9d28-ffd9c2194865}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Engine\Subsystems">
+      <UniqueIdentifier>{b544858b-31d2-447f-a9d7-836053a4d9b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Engine\AppFSM">
+      <UniqueIdentifier>{d0f61395-d801-4c62-a8a7-e94868e8e889}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\EcoSim">
+      <UniqueIdentifier>{baadad06-cd21-49f8-a76c-d5bec59472ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Engine\AppFSM\AppStates">
+      <UniqueIdentifier>{1f4bb007-af83-4eb8-911e-ea1ac6d17971}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\EcoSim\AppStates">
+      <UniqueIdentifier>{f304b8f7-d24f-40d6-b8d0-16b6a2b4a0a4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="Game.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="Font.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
     <ClCompile Include="Font_Subsystem.cpp">
-      <Filter>Source\Subsystems</Filter>
-    </ClCompile>
-    <ClCompile Include="Subsystems.cpp">
-      <Filter>Source</Filter>
+      <Filter>Source\Engine\Subsystems</Filter>
     </ClCompile>
     <ClCompile Include="SDL_Subsystem.cpp">
-      <Filter>Source\Subsystems</Filter>
+      <Filter>Source\Engine\Subsystems</Filter>
     </ClCompile>
     <ClCompile Include="Image_Subsystem.cpp">
-      <Filter>Source\Subsystems</Filter>
+      <Filter>Source\Engine\Subsystems</Filter>
     </ClCompile>
     <ClCompile Include="Application.cpp">
-      <Filter>Source</Filter>
+      <Filter>Source\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Font.cpp">
+      <Filter>Source\Engine</Filter>
     </ClCompile>
     <ClCompile Include="GameEngine.cpp">
-      <Filter>Source</Filter>
+      <Filter>Source\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Subsystems.cpp">
+      <Filter>Source\Engine</Filter>
     </ClCompile>
     <ClCompile Include="Text.cpp">
-      <Filter>Source</Filter>
+      <Filter>Source\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source\EcoSim</Filter>
+    </ClCompile>
+    <ClCompile Include="AppExit_AppState.cpp">
+      <Filter>Source\Engine\AppFSM\AppStates</Filter>
+    </ClCompile>
+    <ClCompile Include="AppInit_AppState.cpp">
+      <Filter>Source\Engine\AppFSM\AppStates</Filter>
+    </ClCompile>
+    <ClCompile Include="AppFSM.cpp">
+      <Filter>Source\Engine\AppFSM</Filter>
+    </ClCompile>
+    <ClCompile Include="Title_AppState.cpp">
+      <Filter>Source\EcoSim\AppStates</Filter>
+    </ClCompile>
+    <ClCompile Include="Game_AppState.cpp">
+      <Filter>Source\EcoSim\AppStates</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Game.h">
-      <Filter>Source</Filter>
-    </ClInclude>
-    <ClInclude Include="Font.h">
-      <Filter>Source</Filter>
-    </ClInclude>
     <ClInclude Include="Font_Subsystem.h">
-      <Filter>Source\Subsystems</Filter>
-    </ClInclude>
-    <ClInclude Include="Subsystems.h">
-      <Filter>Source</Filter>
+      <Filter>Source\Engine\Subsystems</Filter>
     </ClInclude>
     <ClInclude Include="SDL_Subsystem.h">
-      <Filter>Source\Subsystems</Filter>
+      <Filter>Source\Engine\Subsystems</Filter>
     </ClInclude>
     <ClInclude Include="Image_Subsystem.h">
-      <Filter>Source\Subsystems</Filter>
+      <Filter>Source\Engine\Subsystems</Filter>
     </ClInclude>
     <ClInclude Include="SDL_ImageLoader.h">
       <Filter>Source\Helpers</Filter>
     </ClInclude>
     <ClInclude Include="Application.h">
-      <Filter>Source</Filter>
+      <Filter>Source\Engine</Filter>
     </ClInclude>
-    <ClInclude Include="PointerBag.h">
-      <Filter>Source</Filter>
+    <ClInclude Include="Font.h">
+      <Filter>Source\Engine</Filter>
     </ClInclude>
     <ClInclude Include="GameEngine.h">
-      <Filter>Source</Filter>
+      <Filter>Source\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Subsystems.h">
+      <Filter>Source\Engine</Filter>
     </ClInclude>
     <ClInclude Include="Text.h">
-      <Filter>Source</Filter>
+      <Filter>Source\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="PointerBag.h">
+      <Filter>Source\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Source\EcoSim</Filter>
+    </ClInclude>
+    <ClInclude Include="AppExit_AppState.h">
+      <Filter>Source\Engine\AppFSM\AppStates</Filter>
+    </ClInclude>
+    <ClInclude Include="AppInit_AppState.h">
+      <Filter>Source\Engine\AppFSM\AppStates</Filter>
+    </ClInclude>
+    <ClInclude Include="AppFSM.h">
+      <Filter>Source\Engine\AppFSM</Filter>
+    </ClInclude>
+    <ClInclude Include="AppState.h">
+      <Filter>Source\Engine\AppFSM</Filter>
+    </ClInclude>
+    <ClInclude Include="Title_AppState.h">
+      <Filter>Source\EcoSim\AppStates</Filter>
+    </ClInclude>
+    <ClInclude Include="Game_AppState.h">
+      <Filter>Source\EcoSim\AppStates</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

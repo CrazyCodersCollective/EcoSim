@@ -9,33 +9,36 @@ void GameEngine::Run()
 
 	application = new Application(&pointerBag);
 	application->Create();
-	renderer = pointerBag.GetRenderer();
 
-	// Startup the game
-	StartUp();
+	appFSM = new AppFSM(&pointerBag);
+
+	// Setup the game
+	Setup();
 
 	while (pointerBag.isRunning)
 	{
+		appFSM->UpdateFSM();
+
 		SDL_Event event;
 		while (SDL_PollEvent(&event))
 		{
 			application->HandleEvent(event);
-			
+
 			// Piping the events through here
-			HandleEvent(event);
+			appFSM->OnEvent(event);
 		}
 
 		// Update the game
-		Update();
+		appFSM->OnUpdate();
 
 		// Render the game
 		application->RenderBegin();
-		Render();
+		appFSM->OnRender();
+		appFSM->OnRenderUI();
 		application->RenderEnd();
 	}
 
-	// Shutdown the game
-	Shutdown();
+	delete appFSM;
 
 	application->Destroy();
 	delete application;

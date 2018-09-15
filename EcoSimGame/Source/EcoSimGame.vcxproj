@@ -84,29 +84,39 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AppExit_AppState.cpp" />
+    <ClCompile Include="AppFSM.cpp" />
+    <ClCompile Include="AppInit_AppState.cpp" />
     <ClCompile Include="Application.cpp" />
     <ClCompile Include="Font.cpp" />
     <ClCompile Include="Font_Subsystem.cpp" />
-    <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameEngine.cpp" />
+    <ClCompile Include="Game_AppState.cpp" />
     <ClCompile Include="Image_Subsystem.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SDL_Subsystem.cpp" />
     <ClCompile Include="Subsystems.cpp" />
     <ClCompile Include="Text.cpp" />
+    <ClCompile Include="Title_AppState.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AppExit_AppState.h" />
+    <ClInclude Include="AppFSM.h" />
+    <ClInclude Include="AppInit_AppState.h" />
     <ClInclude Include="Application.h" />
+    <ClInclude Include="AppState.h" />
     <ClInclude Include="Font.h" />
     <ClInclude Include="Font_Subsystem.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameEngine.h" />
+    <ClInclude Include="Game_AppState.h" />
     <ClInclude Include="Image_Subsystem.h" />
     <ClInclude Include="PointerBag.h" />
     <ClInclude Include="SDL_ImageLoader.h" />
     <ClInclude Include="SDL_Subsystem.h" />
     <ClInclude Include="Subsystems.h" />
     <ClInclude Include="Text.h" />
+    <ClInclude Include="Title_AppState.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
