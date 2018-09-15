@@ -3,6 +3,7 @@
 #include "GameEngine.h"
 #include "Font.h"
 #include "Text.h"
+#include "sprite.h"
 
 class Game : public GameEngine
 {
@@ -20,6 +21,5 @@ private:
 
 	/* Game stuffs */
 	SDL_Texture* testObject;
-	Font* testFont;
-	Text* testText;
+	Sprite* TestSprite;
 };

@@ -30,6 +30,9 @@ void GameEngine::Run()
 
 		// Render the game
 		application->RenderBegin();
+		for (int i = 0; i < items.size(); i++) {
+			items[i]->render();
+		}
 		Render();
 		application->RenderEnd();
 	}
@@ -41,4 +44,10 @@ void GameEngine::Run()
 	delete application;
 
 	Subsystems::Shutdown();
+}
+
+void GameEngine::AddChild(Node* item) {
+	items.push_back(item);//add sorting by darw order
+	//add 
+
 }

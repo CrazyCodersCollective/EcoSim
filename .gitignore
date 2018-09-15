@@ -30,3 +30,6 @@
 *.exe
 *.out
 *.app
+/EcoSimGame/Temp
+/EcoSimGame/Source/.vs/EcoSimGame/v15/Browse.VC.opendb
+*.db
