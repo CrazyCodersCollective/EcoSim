@@ -4,14 +4,15 @@
 #include "PointerBag.h"
 #include "Application.h"
 #include "Node.h"
+#include "RootNode.h"
 
 class GameEngine
 {
 public:
 	GameEngine() {}
 	virtual ~GameEngine() {}
-
 	void Run();
+	RootNode screen;
 
 protected:
 	virtual void StartUp() = 0;
@@ -26,5 +27,5 @@ protected:
 
 private:
 	Application* application;
-	std::vector<Node*> items;
+	//std::vector<Node*> items;
 };

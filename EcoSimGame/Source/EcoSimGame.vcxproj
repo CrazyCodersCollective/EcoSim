@@ -92,6 +92,7 @@
     <ClCompile Include="Image_Subsystem.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Node.cpp" />
+    <ClCompile Include="RootNode.cpp" />
     <ClCompile Include="SDL_Subsystem.cpp" />
     <ClCompile Include="sprite.cpp" />
     <ClCompile Include="Subsystems.cpp" />
@@ -106,6 +107,7 @@
     <ClInclude Include="Node.h" />
     <ClInclude Include="Image_Subsystem.h" />
     <ClInclude Include="PointerBag.h" />
+    <ClInclude Include="RootNode.h" />
     <ClInclude Include="SDL_ImageLoader.h" />
     <ClInclude Include="SDL_Subsystem.h" />
     <ClInclude Include="sprite.h" />

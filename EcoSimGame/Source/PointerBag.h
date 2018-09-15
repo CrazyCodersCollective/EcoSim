@@ -9,5 +9,5 @@ struct PointerBag
 	bool isRunning;
 
 	SDL_Renderer* renderer = nullptr; // just a quick lookup, not the source
-	SDL_Renderer* GetRenderer() { return renderer; }
+	SDL_Renderer* GetRenderer() { return renderer; }// this brakes in places, investigate 
 };

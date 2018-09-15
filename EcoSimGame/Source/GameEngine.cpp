@@ -11,6 +11,7 @@ void GameEngine::Run()
 	application->Create();
 	renderer = pointerBag.GetRenderer();
 
+	screen = RootNode(&pointerBag);//defult screen
 	// Startup the game
 	StartUp();
 
@@ -20,7 +21,7 @@ void GameEngine::Run()
 		while (SDL_PollEvent(&event))
 		{
 			application->HandleEvent(event);
-			
+
 			// Piping the events through here
 			HandleEvent(event);
 		}
@@ -30,24 +31,27 @@ void GameEngine::Run()
 
 		// Render the game
 		application->RenderBegin();
-		for (int i = 0; i < items.size(); i++) {
-			items[i]->render();
+		for (int i = 0; i < screen.children.size(); i++) {
+			screen.children[i]->render();
 		}
 		Render();
 		application->RenderEnd();
 	}
 
 	// Shutdown the game
-	Shutdown();
+	for (int i = 0; i < screen.children.size(); i++) {
+		screen.children[i]->Destroy();
+		Shutdown();
 
-	application->Destroy();
-	delete application;
+		application->Destroy();
+		delete application;
 
-	Subsystems::Shutdown();
+		Subsystems::Shutdown();
+	}
 }
 
-void GameEngine::AddChild(Node* item) {
-	items.push_back(item);//add sorting by darw order
+void GameEngine::AddChild(Node* item){
+	screen;//add sorting by darw order
 	//add 
 
-}
+};

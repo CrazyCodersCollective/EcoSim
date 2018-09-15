@@ -10,6 +10,9 @@
     <Filter Include="Source\Helpers">
       <UniqueIdentifier>{0d29ffba-872d-4cf4-b4ce-6ff95c728735}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Nodes">
+      <UniqueIdentifier>{5898a355-421d-4c8d-8d63-d963328bcb4e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -39,14 +42,17 @@
     <ClCompile Include="GameEngine.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="Text.cpp">
-      <Filter>Source</Filter>
+    <ClCompile Include="sprite.cpp">
+      <Filter>Source\Nodes</Filter>
     </ClCompile>
     <ClCompile Include="Node.cpp">
-      <Filter>Source</Filter>
+      <Filter>Source\Nodes</Filter>
     </ClCompile>
-    <ClCompile Include="sprite.cpp">
-      <Filter>Source</Filter>
+    <ClCompile Include="Text.cpp">
+      <Filter>Source\Nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="RootNode.cpp">
+      <Filter>Source\Nodes</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -80,14 +86,17 @@
     <ClInclude Include="GameEngine.h">
       <Filter>Source</Filter>
     </ClInclude>
-    <ClInclude Include="Text.h">
-      <Filter>Source</Filter>
+    <ClInclude Include="sprite.h">
+      <Filter>Source\Nodes</Filter>
     </ClInclude>
     <ClInclude Include="Node.h">
-      <Filter>Source</Filter>
+      <Filter>Source\Nodes</Filter>
     </ClInclude>
-    <ClInclude Include="sprite.h">
-      <Filter>Source</Filter>
+    <ClInclude Include="Text.h">
+      <Filter>Source\Nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="RootNode.h">
+      <Filter>Source\Nodes</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

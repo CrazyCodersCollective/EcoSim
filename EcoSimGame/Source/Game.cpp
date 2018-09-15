@@ -8,13 +8,13 @@
 void Game::StartUp()
 {
 	std::string texturePath = "Resource/Textures/testObject.png";
-	//testObject = SDL_ImageLoader_LoadTexture(renderer, (char*)texturePath.c_str());
-	//if (!testObject) {
-		//pointerBag.isRunning = false;
-		//return; // Failed!
-	//}
-	TestSprite = new Sprite(&pointerBag, 100, 100, texturePath);
-	TestSprite->Texture((char*)texturePath.c_str());
+	TestSprite = new Sprite(&this->screen, 100, 100, texturePath);//we dont need add it to the screeen with addchild becaue the firt paramiter will do that for us 
+	//AddChild(TestSprite);
+	//TestSprite->Texture(texturePath);
+
+	TestSprite2 = new Sprite(TestSprite, 10, 10, texturePath);//becaues the master is the other node it will folow it around
+	//AddChild(TestSprite2);
+	//TestSprite->Texture(texturePath);
 }
 
 void Game::Shutdown()
@@ -30,18 +30,28 @@ void Game::HandleEvent(SDL_Event& event)
 	{
 		case (SDL_KEYDOWN):
 		{
-			if (event.key.keysym.sym == SDLK_ESCAPE)
+			switch (event.key.keysym.sym)
+		case (SDLK_ESCAPE):
 				pointerBag.isRunning = false;
+		case (SDLK_w):
+			TestSprite->AddPos(0.0, -5.0);
+		case (SDLK_a):
+			TestSprite->AddPos(-5.0, 0.0);
+		case (SDLK_s):
+			TestSprite->AddPos(0.0, 5.0);
+		case (SDLK_d):
+			TestSprite->AddPos(5.0, 0.0);
 		} break;
+		//case (SDL_KEYUP):
 	}
 }
 
 void Game::Update()
 {
-	
+	//TestSprite->render();
 }
 
 void Game::Render()
 {
-	
+	//TestSprite->render();
 }

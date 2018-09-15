@@ -5,7 +5,7 @@ class Sprite :
 	public Node
 {
 public:
-	Sprite(PointerBag* master, int x, int y, std::string file);
+	Sprite(Node* master, int x, int y, std::string file);
 	Sprite(){}
 	~Sprite();
 	void render();
