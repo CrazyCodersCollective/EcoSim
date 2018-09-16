@@ -75,7 +75,7 @@ void Title_AppState::OnEvent(SDL_Event& event)
 			{
 				case 0: // New game
 				{
-					pointerBag->appFSM->ChangeState("Game");
+					pointerBag->appFSM->ChangeState("GameSetup");
 				} break;
 				case 1: // Load game
 				{

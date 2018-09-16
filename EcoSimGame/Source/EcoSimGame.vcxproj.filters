@@ -93,6 +93,9 @@
     <ClCompile Include="Options_AppState.cpp">
       <Filter>Source\EcoSim\AppStates</Filter>
     </ClCompile>
+    <ClCompile Include="GameSetup_AppState.cpp">
+      <Filter>Source\EcoSim\AppStates</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Font_Subsystem.h">
@@ -159,6 +162,9 @@
       <Filter>Source\EcoSim\AppStates</Filter>
     </ClInclude>
     <ClInclude Include="Options_AppState.h">
+      <Filter>Source\EcoSim\AppStates</Filter>
+    </ClInclude>
+    <ClInclude Include="GameSetup_AppState.h">
       <Filter>Source\EcoSim\AppStates</Filter>
     </ClInclude>
   </ItemGroup>

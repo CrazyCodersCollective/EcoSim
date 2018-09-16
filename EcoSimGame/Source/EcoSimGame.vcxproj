@@ -91,6 +91,7 @@
     <ClCompile Include="Font.cpp" />
     <ClCompile Include="Font_Subsystem.cpp" />
     <ClCompile Include="GameEngine.cpp" />
+    <ClCompile Include="GameSetup_AppState.cpp" />
     <ClCompile Include="Game_AppState.cpp" />
     <ClCompile Include="Image_Subsystem.cpp" />
     <ClCompile Include="Load_AppState.cpp" />
@@ -114,6 +115,7 @@
     <ClInclude Include="Font_Subsystem.h" />
     <ClInclude Include="GameApp.h" />
     <ClInclude Include="GameEngine.h" />
+    <ClInclude Include="GameSetup_AppState.h" />
     <ClInclude Include="Game_AppState.h" />
     <ClInclude Include="Image_Subsystem.h" />
     <ClInclude Include="Load_AppState.h" />

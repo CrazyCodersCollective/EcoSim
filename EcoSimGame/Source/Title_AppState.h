@@ -13,7 +13,7 @@
 	1. Add button events
 	2.0 Add static background (stage 1)
 	2.1 Add parallax's background (stage 2)
-	2.2 Add running animal (stage 3).  Too much?
+	2.2 Add running animal (stage 3).  Too much? Requires timing.
 */
 
 class Title_AppState : public AppState

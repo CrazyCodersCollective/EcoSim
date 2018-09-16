@@ -5,6 +5,7 @@
 // AppStates
 #include "Title_AppState.h"
 #include "Game_AppState.h"
+#include "GameSetup_AppState.h"
 #include "Load_AppState.h"
 #include "Options_AppState.h"
 
@@ -19,6 +20,7 @@ private:
 	{
 		appFSM->AddState(new Title_AppState(appFSM->GetPointerBag()));
 		appFSM->AddState(new Game_AppState(appFSM->GetPointerBag()));
+		appFSM->AddState(new GameSetup_AppState(appFSM->GetPointerBag()));
 		appFSM->AddState(new Load_AppState(appFSM->GetPointerBag()));
 		appFSM->AddState(new Options_AppState(appFSM->GetPointerBag()));
 
