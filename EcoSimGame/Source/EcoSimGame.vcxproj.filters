@@ -25,6 +25,15 @@
     <Filter Include="Source\EcoSim\AppStates">
       <UniqueIdentifier>{f304b8f7-d24f-40d6-b8d0-16b6a2b4a0a4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\EcoSim\Title">
+      <UniqueIdentifier>{66c30799-9f1b-4a20-b2ed-2262717e1e17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\EcoSim\Game">
+      <UniqueIdentifier>{bfbf2a0c-4820-4e8d-a4ca-4282d4a862f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Engine\UI">
+      <UniqueIdentifier>{8ae09442-9525-44f1-a069-fbf6ecaaa992}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Font_Subsystem.cpp">
@@ -39,16 +48,10 @@
     <ClCompile Include="Application.cpp">
       <Filter>Source\Engine</Filter>
     </ClCompile>
-    <ClCompile Include="Font.cpp">
-      <Filter>Source\Engine</Filter>
-    </ClCompile>
     <ClCompile Include="GameEngine.cpp">
       <Filter>Source\Engine</Filter>
     </ClCompile>
     <ClCompile Include="Subsystems.cpp">
-      <Filter>Source\Engine</Filter>
-    </ClCompile>
-    <ClCompile Include="Text.cpp">
       <Filter>Source\Engine</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
@@ -69,6 +72,27 @@
     <ClCompile Include="Game_AppState.cpp">
       <Filter>Source\EcoSim\AppStates</Filter>
     </ClCompile>
+    <ClCompile Include="TitleMenu.cpp">
+      <Filter>Source\EcoSim\Title</Filter>
+    </ClCompile>
+    <ClCompile Include="Font.cpp">
+      <Filter>Source\Engine\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Text.cpp">
+      <Filter>Source\Engine\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuButton.cpp">
+      <Filter>Source\Engine\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UITexture.cpp">
+      <Filter>Source\Engine\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Load_AppState.cpp">
+      <Filter>Source\EcoSim\AppStates</Filter>
+    </ClCompile>
+    <ClCompile Include="Options_AppState.cpp">
+      <Filter>Source\EcoSim\AppStates</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Font_Subsystem.h">
@@ -86,23 +110,14 @@
     <ClInclude Include="Application.h">
       <Filter>Source\Engine</Filter>
     </ClInclude>
-    <ClInclude Include="Font.h">
-      <Filter>Source\Engine</Filter>
-    </ClInclude>
     <ClInclude Include="GameEngine.h">
       <Filter>Source\Engine</Filter>
     </ClInclude>
     <ClInclude Include="Subsystems.h">
       <Filter>Source\Engine</Filter>
     </ClInclude>
-    <ClInclude Include="Text.h">
-      <Filter>Source\Engine</Filter>
-    </ClInclude>
     <ClInclude Include="PointerBag.h">
       <Filter>Source\Engine</Filter>
-    </ClInclude>
-    <ClInclude Include="Game.h">
-      <Filter>Source\EcoSim</Filter>
     </ClInclude>
     <ClInclude Include="AppExit_AppState.h">
       <Filter>Source\Engine\AppFSM\AppStates</Filter>
@@ -120,6 +135,30 @@
       <Filter>Source\EcoSim\AppStates</Filter>
     </ClInclude>
     <ClInclude Include="Game_AppState.h">
+      <Filter>Source\EcoSim\AppStates</Filter>
+    </ClInclude>
+    <ClInclude Include="TitleMenu.h">
+      <Filter>Source\EcoSim\Title</Filter>
+    </ClInclude>
+    <ClInclude Include="Font.h">
+      <Filter>Source\Engine\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Text.h">
+      <Filter>Source\Engine\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuButton.h">
+      <Filter>Source\Engine\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UITexture.h">
+      <Filter>Source\Engine\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="GameApp.h">
+      <Filter>Source\EcoSim</Filter>
+    </ClInclude>
+    <ClInclude Include="Load_AppState.h">
+      <Filter>Source\EcoSim\AppStates</Filter>
+    </ClInclude>
+    <ClInclude Include="Options_AppState.h">
       <Filter>Source\EcoSim\AppStates</Filter>
     </ClInclude>
   </ItemGroup>

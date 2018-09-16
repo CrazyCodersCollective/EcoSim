@@ -1,24 +1,24 @@
-#include "Game_AppState.h"
+#include "Options_AppState.h"
 #include <stdio.h>
 #include "SDL_ImageLoader.h"
 #include "AppFSM.h"
 
-void Game_AppState::OnEntry()
+void Options_AppState::OnEntry()
 {
-	//printf("Game_AppState::OnEntry\n");
+	//printf("Options_AppState::OnEntry\n");
 
 	renderer = pointerBag->GetRenderer();
 
 	testFont = new Font();
 	testFont->LoadFont("Resource/Fonts/monogram.ttf", 28);
 	
-	testText = new Text(pointerBag, "Game! Press Q to return", testFont);
+	testText = new Text(pointerBag, "Options! Press Q to return", testFont);
 	testText->Create(200, 300, SDL_Color{ 255,0,0,255 });
 }
 
-void Game_AppState::OnExit()
+void Options_AppState::OnExit()
 {
-	//printf("Game_AppState::OnExit\n");
+	//printf("Options_AppState::OnExit\n");
 
 	if (testText)
 		testText->Destroy();
@@ -27,9 +27,9 @@ void Game_AppState::OnExit()
 		testFont->FreeFont();
 }
 
-void Game_AppState::OnEvent(SDL_Event& event)
+void Options_AppState::OnEvent(SDL_Event& event)
 {
-	//printf("Game_AppState::OnEvent\n");
+	//printf("Options_AppState::OnEvent\n");
 
 	switch (event.type)
 	{
@@ -53,14 +53,14 @@ void Game_AppState::OnEvent(SDL_Event& event)
 
 }
 
-void Game_AppState::OnUpdate()
+void Options_AppState::OnUpdate()
 {
-	//printf("Game_AppState::OnUpdate\n");
+	//printf("Options_AppState::OnUpdate\n");
 }
 
-void Game_AppState::OnRender()
+void Options_AppState::OnRender()
 {
-	//printf("Game_AppState::OnRender\n");
+	//printf("Options_AppState::OnRender\n");
 
 	if (!renderer)
 		return;
@@ -68,9 +68,9 @@ void Game_AppState::OnRender()
 	testText->Render();
 }
 
-void Game_AppState::OnRenderUI()
+void Options_AppState::OnRenderUI()
 {
-	//printf("Game_AppState::OnRenderUI\n");
+	//printf("Options_AppState::OnRenderUI\n");
 
 	if (!renderer)
 		return;

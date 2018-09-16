@@ -93,11 +93,16 @@
     <ClCompile Include="GameEngine.cpp" />
     <ClCompile Include="Game_AppState.cpp" />
     <ClCompile Include="Image_Subsystem.cpp" />
+    <ClCompile Include="Load_AppState.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MenuButton.cpp" />
+    <ClCompile Include="Options_AppState.cpp" />
     <ClCompile Include="SDL_Subsystem.cpp" />
     <ClCompile Include="Subsystems.cpp" />
     <ClCompile Include="Text.cpp" />
+    <ClCompile Include="TitleMenu.cpp" />
     <ClCompile Include="Title_AppState.cpp" />
+    <ClCompile Include="UITexture.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AppExit_AppState.h" />
@@ -107,16 +112,21 @@
     <ClInclude Include="AppState.h" />
     <ClInclude Include="Font.h" />
     <ClInclude Include="Font_Subsystem.h" />
-    <ClInclude Include="Game.h" />
+    <ClInclude Include="GameApp.h" />
     <ClInclude Include="GameEngine.h" />
     <ClInclude Include="Game_AppState.h" />
     <ClInclude Include="Image_Subsystem.h" />
+    <ClInclude Include="Load_AppState.h" />
+    <ClInclude Include="MenuButton.h" />
+    <ClInclude Include="Options_AppState.h" />
     <ClInclude Include="PointerBag.h" />
     <ClInclude Include="SDL_ImageLoader.h" />
     <ClInclude Include="SDL_Subsystem.h" />
     <ClInclude Include="Subsystems.h" />
     <ClInclude Include="Text.h" />
+    <ClInclude Include="TitleMenu.h" />
     <ClInclude Include="Title_AppState.h" />
+    <ClInclude Include="UITexture.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

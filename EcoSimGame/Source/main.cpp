@@ -1,11 +1,11 @@
 #include <SDL.h>
-#include "Game.h"
+#include "GameApp.h"
 
 int main(int argc, char* argv[])
 {
-	Game* game = new Game();
-	game->Run();
-	delete game;
+	GameApp* gameApp = new GameApp();
+	gameApp->Run();
+	delete gameApp;
 
 	return 0;
 }
