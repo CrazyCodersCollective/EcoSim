@@ -209,5 +209,8 @@
     <ClInclude Include="Game.h">
       <Filter>Source\EcoSim</Filter>
     </ClInclude>
+    <ClInclude Include="MouseCursor.h">
+      <Filter>Source\Engine\UI</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
