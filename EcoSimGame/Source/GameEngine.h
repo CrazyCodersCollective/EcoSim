@@ -3,6 +3,8 @@
 #include "PointerBag.h"
 #include "Application.h"
 #include "AppFSM.h"
+#include "MouseCursor.h"
+
 
 class GameEngine
 {
@@ -20,4 +22,6 @@ protected:
 
 private:
 	Application* application;
+
+	MouseCursor* mouseCursor;
 };

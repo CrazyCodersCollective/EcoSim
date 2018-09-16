@@ -102,6 +102,9 @@
     <ClCompile Include="SimpleButton.cpp">
       <Filter>Source\Engine\UI</Filter>
     </ClCompile>
+    <ClCompile Include="MouseCursor.cpp">
+      <Filter>Source\Engine\UI</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Font_Subsystem.h">
@@ -174,6 +177,9 @@
       <Filter>Source\EcoSim\AppStates</Filter>
     </ClInclude>
     <ClInclude Include="SimpleButton.h">
+      <Filter>Source\Engine\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="MouseCursor.h">
       <Filter>Source\Engine\UI</Filter>
     </ClInclude>
   </ItemGroup>

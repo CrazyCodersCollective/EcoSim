@@ -10,8 +10,11 @@ void GameEngine::Run()
 	application = new Application(&pointerBag);
 	application->Create();
 
-	appFSM = new AppFSM(&pointerBag);
+	mouseCursor = new MouseCursor();
+	mouseCursor->Create("Resource/Textures/MouseCursorPointer.png");
 
+	appFSM = new AppFSM(&pointerBag);
+	
 	// Setup the game
 	Setup();
 
@@ -39,6 +42,9 @@ void GameEngine::Run()
 	}
 
 	delete appFSM;
+
+	mouseCursor->Destroy();
+	delete mouseCursor;
 
 	application->Destroy();
 	delete application;

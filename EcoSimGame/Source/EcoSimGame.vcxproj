@@ -97,6 +97,7 @@
     <ClCompile Include="Load_AppState.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MenuButton.cpp" />
+    <ClCompile Include="MouseCursor.cpp" />
     <ClCompile Include="Options_AppState.cpp" />
     <ClCompile Include="SDL_Subsystem.cpp" />
     <ClCompile Include="SimpleButton.cpp" />
@@ -121,6 +122,7 @@
     <ClInclude Include="Image_Subsystem.h" />
     <ClInclude Include="Load_AppState.h" />
     <ClInclude Include="MenuButton.h" />
+    <ClInclude Include="MouseCursor.h" />
     <ClInclude Include="Options_AppState.h" />
     <ClInclude Include="PointerBag.h" />
     <ClInclude Include="SDL_ImageLoader.h" />
