@@ -28,7 +28,7 @@ void Title_AppState::OnEntry()
 	testFont = new Font();
 	testFont->LoadFont("Resource/Fonts/monogram.ttf", 28);
 
-	testText = new Text(pointerBag, "Title", testFont);
+	testText = new Text(renderer, "Title", testFont);
 	testText->Create(200, 300, SDL_Color{ 255,0,0,255 });
 }
 

@@ -1,15 +1,5 @@
 #include "MenuButton.h"
 
-//MenuButton::MenuButton(UITexture* uiTexture, float x, float y) : uiTexture(uiTexture)
-//{
-	//uiTexture->SetPosition(x, y);
-//}
-
-//MenuButton::MenuButton(SDL_Renderer* renderer, std::string filePath, SDL_Rect srcRect, SDL_Rect dstRect)
-//{
-//	uiTexture = new UITexture(renderer, filePath, srcRect, dstRect);
-//}
-
 MenuButton::MenuButton(SDL_Renderer* renderer, UITexture* uiTexture, SDL_Rect srcRect, SDL_Rect dstRect)
 {
 	this->renderer = renderer;

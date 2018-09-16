@@ -12,7 +12,7 @@ void Game_AppState::OnEntry()
 	testFont = new Font();
 	testFont->LoadFont("Resource/Fonts/monogram.ttf", 28);
 	
-	testText = new Text(pointerBag, "Game! Press Q to return", testFont);
+	testText = new Text(renderer, "Game! Press Q to return", testFont);
 	testText->Create(200, 300, SDL_Color{ 255,0,0,255 });
 }
 

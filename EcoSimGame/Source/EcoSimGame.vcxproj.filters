@@ -34,6 +34,9 @@
     <Filter Include="Source\Engine\UI">
       <UniqueIdentifier>{8ae09442-9525-44f1-a069-fbf6ecaaa992}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\EcoSim\GameSetup">
+      <UniqueIdentifier>{ecb736ec-1145-4677-914b-60bcc7bf0932}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Font_Subsystem.cpp">
@@ -95,6 +98,9 @@
     </ClCompile>
     <ClCompile Include="GameSetup_AppState.cpp">
       <Filter>Source\EcoSim\AppStates</Filter>
+    </ClCompile>
+    <ClCompile Include="SimpleButton.cpp">
+      <Filter>Source\Engine\UI</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -166,6 +172,9 @@
     </ClInclude>
     <ClInclude Include="GameSetup_AppState.h">
       <Filter>Source\EcoSim\AppStates</Filter>
+    </ClInclude>
+    <ClInclude Include="SimpleButton.h">
+      <Filter>Source\Engine\UI</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

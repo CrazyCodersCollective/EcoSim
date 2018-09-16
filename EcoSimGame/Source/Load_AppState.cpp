@@ -12,7 +12,7 @@ void Load_AppState::OnEntry()
 	testFont = new Font();
 	testFont->LoadFont("Resource/Fonts/monogram.ttf", 28);
 	
-	testText = new Text(pointerBag, "Load! Press Q to return", testFont);
+	testText = new Text(renderer, "Load! Press Q to return", testFont);
 	testText->Create(200, 300, SDL_Color{ 255,0,0,255 });
 }
 
