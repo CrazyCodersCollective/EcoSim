@@ -24,4 +24,5 @@ private:
 	SDL_Texture* testObject;
 	Sprite* TestSprite;
 	Sprite* TestSprite2;
+	RootNode* root;
 };

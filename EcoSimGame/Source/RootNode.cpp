@@ -6,6 +6,7 @@ RootNode::RootNode() {
 }
 RootNode::RootNode(SDL_Renderer* renderer, int x, int y) //: Node.renderer(renderer), Node.x(x), Node.y(y), Node.screen(this), Node.master(this)
 {
+	if (renderer == NULL)printf("error in root node");
 	this->renderer = renderer;
 	this->master = this;
 	this->screen = this;

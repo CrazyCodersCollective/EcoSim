@@ -12,7 +12,7 @@ void GameEngine::Run()
 	application->Create();
 	renderer = pointerBag.GetRenderer();
 	if (!renderer)printf("null pointer in gameengin init");
-	//screen = RootNode(renderer, 0 ,0);//defult screen
+	screen = RootNode(renderer, 0 ,0);//defult screen
 	// Startup the game
 	StartUp();
 
@@ -32,9 +32,10 @@ void GameEngine::Run()
 
 		// Render the game
 		application->RenderBegin();
-		for (int i = 0; i < screen.children.size(); i++) {
-			screen.children[i]->render();
-		}
+		//for (int i = 0; i < screen.children.size(); i++) {
+			//screen.children[i]->render();
+		screen.render();
+		
 		Render();
 		application->RenderEnd();
 	}

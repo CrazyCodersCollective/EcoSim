@@ -12,6 +12,6 @@ public:
 	void Destroy();
 	void Texture(std::string file);
 protected:
-	SDL_Texture* texture;
+	SDL_Texture* texture = nullptr;
 };
 

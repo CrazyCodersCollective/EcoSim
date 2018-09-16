@@ -12,7 +12,7 @@ public:
 	Node(SDL_Renderer* renderer, int x = 0, int y = 0);
 
 	virtual ~Node(){}
-	virtual void render(){}
+	virtual void render();
 	virtual void Destroy() {}
 
 	void SetPos(float x, float y);
@@ -20,8 +20,8 @@ public:
 	void AddChild(Node* node);
 
 	
-	float x;//add seter and getter
-	float y;//add seter and getter
+	float x = 0 ;//add seter and getter
+	float y = 0;//add seter and getter
 	int z; //the draw order
 	float rotation;//add seter and getter
 

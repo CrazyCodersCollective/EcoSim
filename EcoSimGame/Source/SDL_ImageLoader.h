@@ -11,7 +11,7 @@
 static SDL_Texture* SDL_ImageLoader_LoadTexture(SDL_Renderer *renderer, char *file_path)
 {
 	// The final texture
-	SDL_Texture* newTexture = NULL;
+ 	SDL_Texture* newTexture = NULL;
 
 	// Load image at specified path
 	SDL_Surface* loadedSurface = IMG_Load(file_path);
