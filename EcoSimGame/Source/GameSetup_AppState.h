@@ -7,6 +7,10 @@
 #include "Text.h"
 #include "SimpleButton.h"
 
+/*
+	TODO: Hovering buttons
+*/
+
 class GameSetup_AppState : public AppState
 {
 public:
@@ -26,9 +30,9 @@ private:
 	SDL_Renderer* renderer;
 
 	/* Game stuffs */
-	Font* testFont;
-	Text* testText;
-	Text* testText2;
+	Font* uiFont;
+	//Text* testText;
+	//Text* testText2;
 
 	/* UI stuff */
 	SimpleButton* sButtonBack;

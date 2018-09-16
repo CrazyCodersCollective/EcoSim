@@ -9,37 +9,32 @@ void GameSetup_AppState::OnEntry()
 
 	renderer = pointerBag->GetRenderer();
 
-	testFont = new Font();
-	testFont->LoadFont("Resource/Fonts/monogram.ttf", 28);
-	
-	testText = new Text(renderer, "GameSetup! Press Q to return.", testFont);
-	testText->Create(200, 300, SDL_Color{ 255,0,0,255 });
+	uiFont = new Font();
+	uiFont->LoadFont("Resource/Fonts/monogram.ttf", 28);
 
-	testText2 = new Text(renderer, "Press ENTER to start game.", testFont);
-	testText2->Create(200, 350, SDL_Color{ 255,0,0,255 });
 
 	/* Default simulation properties */
 	simFood = 10;
 	simWater = 50;
 
 	/* Create UI */
-	sButtonBack = new SimpleButton(renderer, testFont, SDL_Rect{ 50,550, 100, 30 }, "Back", SDL_Color{ 255,255,255,255 }, SDL_Color{ 163,163,163,255 });
-	sButtonReady = new SimpleButton(renderer, testFont, SDL_Rect{ 650,550,100, 30 }, "Ready", SDL_Color{ 255,255,255,255 }, SDL_Color{ 163,163,163,255 });
+	sButtonBack = new SimpleButton(renderer, uiFont, SDL_Rect{ 50,550, 100, 30 }, "Back", SDL_Color{ 255,255,255,255 }, SDL_Color{ 163,163,163,255 });
+	sButtonReady = new SimpleButton(renderer, uiFont, SDL_Rect{ 650,550,100, 30 }, "Ready", SDL_Color{ 255,255,255,255 }, SDL_Color{ 163,163,163,255 });
 
 	/* FOOD */
-	sButtonFoodDecrease = new SimpleButton(renderer, testFont, SDL_Rect{ 280,200, 20, 20 }, "-", SDL_Color{ 255,255,255,255 }, SDL_Color{ 163,163,163,255 });
-	sButtonFoodIncrease = new SimpleButton(renderer, testFont, SDL_Rect{ 335,200, 20, 20 }, "+", SDL_Color{ 255,255,255,255 }, SDL_Color{ 163,163,163,255 });
-	foodLabelText = new Text(renderer, "Food:", testFont);
+	sButtonFoodDecrease = new SimpleButton(renderer, uiFont, SDL_Rect{ 280,200, 20, 20 }, "-", SDL_Color{ 255,255,255,255 }, SDL_Color{ 163,163,163,255 });
+	sButtonFoodIncrease = new SimpleButton(renderer, uiFont, SDL_Rect{ 335,200, 20, 20 }, "+", SDL_Color{ 255,255,255,255 }, SDL_Color{ 163,163,163,255 });
+	foodLabelText = new Text(renderer, "Food:", uiFont);
 	foodLabelText->Create(200, 198, SDL_Color{ 255,255,255,255 });
-	foodText = new Text(renderer, std::to_string(simFood), testFont);
+	foodText = new Text(renderer, std::to_string(simFood), uiFont);
 	foodText->Create(310, 198, SDL_Color{ 255,255,255,255 });
 
 	/* WATER */
-	sButtonWaterDecrease = new SimpleButton(renderer, testFont, SDL_Rect{ 280,220, 20, 20 }, "-", SDL_Color{ 255,255,255,255 }, SDL_Color{ 163,163,163,255 });
-	sButtonWaterIncrease = new SimpleButton(renderer, testFont, SDL_Rect{ 335,220, 20, 20 }, "+", SDL_Color{ 255,255,255,255 }, SDL_Color{ 163,163,163,255 });
-	waterLabelText = new Text(renderer, "Water:", testFont);
+	sButtonWaterDecrease = new SimpleButton(renderer, uiFont, SDL_Rect{ 280,220, 20, 20 }, "-", SDL_Color{ 255,255,255,255 }, SDL_Color{ 163,163,163,255 });
+	sButtonWaterIncrease = new SimpleButton(renderer, uiFont, SDL_Rect{ 335,220, 20, 20 }, "+", SDL_Color{ 255,255,255,255 }, SDL_Color{ 163,163,163,255 });
+	waterLabelText = new Text(renderer, "Water:", uiFont);
 	waterLabelText->Create(200, 218, SDL_Color{ 255,255,255,255 });
-	waterText = new Text(renderer, std::to_string(simWater), testFont);
+	waterText = new Text(renderer, std::to_string(simWater), uiFont);
 	waterText->Create(310, 218, SDL_Color{ 255,255,255,255 });
 }
 
@@ -68,14 +63,9 @@ void GameSetup_AppState::OnExit()
 		waterText->Destroy();
 
 	//
-	if (testText)
-		testText->Destroy();
 
-	if (testText2)
-		testText2->Destroy();
-
-	if (testFont)
-		testFont->FreeFont();
+	if (uiFont)
+		uiFont->FreeFont();
 }
 
 void GameSetup_AppState::OnEvent(SDL_Event& event)
@@ -197,8 +187,4 @@ void GameSetup_AppState::OnRenderUI()
 	waterText->Render();
 	sButtonWaterDecrease->Render();
 	sButtonWaterIncrease->Render();
-
-	//
-	testText->Render();
-	testText2->Render();
 }
