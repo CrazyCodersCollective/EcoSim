@@ -44,10 +44,11 @@ void Title_AppState::OnExit()
 
 	if (testText)
 		testText->Destroy();
+	delete testText;
 
 	if (testFont)
 		testFont->FreeFont();
-
+	delete testFont;
 }
 
 void Title_AppState::OnEvent(SDL_Event& event)

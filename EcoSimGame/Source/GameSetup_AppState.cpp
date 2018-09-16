@@ -51,21 +51,26 @@ void GameSetup_AppState::OnExit()
 	delete sButtonFoodIncrease;
 	if (foodLabelText)
 		foodLabelText->Destroy();
+	delete foodLabelText;
 	if (foodText)
 		foodText->Destroy();
+	delete foodText;
 
 	/* WATER */
 	delete sButtonWaterDecrease;
 	delete sButtonWaterIncrease;
 	if (waterLabelText)
 		waterLabelText->Destroy();
+	delete waterLabelText;
 	if (waterText)
 		waterText->Destroy();
+	delete waterText;
 
 	//
 
 	if (uiFont)
 		uiFont->FreeFont();
+	delete uiFont;
 }
 
 void GameSetup_AppState::OnEvent(SDL_Event& event)

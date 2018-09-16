@@ -22,9 +22,11 @@ void Load_AppState::OnExit()
 
 	if (testText)
 		testText->Destroy();
+	delete testText;
 	
 	if (testFont)
 		testFont->FreeFont();
+	delete testFont;
 }
 
 void Load_AppState::OnEvent(SDL_Event& event)

@@ -22,9 +22,11 @@ void Game_AppState::OnExit()
 
 	if (testText)
 		testText->Destroy();
+	delete testText;
 	
 	if (testFont)
 		testFont->FreeFont();
+	delete testFont;
 }
 
 void Game_AppState::OnEvent(SDL_Event& event)
