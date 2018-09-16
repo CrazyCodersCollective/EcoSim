@@ -2,16 +2,22 @@
 
 
 
-Node::Node(Node* master = NULL, int xp, int yp){
+Node::Node(Node* master, int xp, int yp){
 	if (master) {
 		this->screen = master->screen;
 		this->master = master;
-		this->renderer = master->renderer;
+		if (master->renderer) {
+			this->renderer = master->renderer;
+			printf("null pointer in node init");
+		}
 	}
 	this->x = (float)xp;
 	this->y = (float)yp;
 }
+Node::Node(){}
+Node::Node(SDL_Renderer* renderer, int x , int y) {
 
+}
 void Node::SetPos(float xp, float yp) {
 	this->x = xp;
 	this->y = yp;

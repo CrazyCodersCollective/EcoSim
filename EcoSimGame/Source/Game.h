@@ -9,6 +9,7 @@ class Game : public GameEngine
 {
 public:
 	Game() {}
+
 	virtual ~Game() {}
 	
 private:

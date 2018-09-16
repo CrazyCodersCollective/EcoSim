@@ -12,7 +12,7 @@ void Game::StartUp()
 	//AddChild(TestSprite);
 	//TestSprite->Texture(texturePath);
 
-	TestSprite2 = new Sprite(TestSprite, 10, 10, texturePath);//becaues the master is the other node it will folow it around
+	//TestSprite2 = new Sprite(TestSprite, 10, 10, texturePath);//becaues the master is the other node it will folow it around
 	//AddChild(TestSprite2);
 	//TestSprite->Texture(texturePath);
 }

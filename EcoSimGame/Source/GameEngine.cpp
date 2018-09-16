@@ -1,5 +1,6 @@
 #include "GameEngine.h"
 #include "Subsystems.h"
+#include "RootNode.h"
 
 void GameEngine::Run()
 {
@@ -10,8 +11,8 @@ void GameEngine::Run()
 	application = new Application(&pointerBag);
 	application->Create();
 	renderer = pointerBag.GetRenderer();
-
-	screen = RootNode(&pointerBag);//defult screen
+	if (!renderer)printf("null pointer in gameengin init");
+	//screen = RootNode(renderer, 0 ,0);//defult screen
 	// Startup the game
 	StartUp();
 
