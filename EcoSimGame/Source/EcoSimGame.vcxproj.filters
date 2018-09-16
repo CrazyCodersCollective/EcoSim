@@ -37,6 +37,9 @@
     <Filter Include="Source\EcoSim\GameSetup">
       <UniqueIdentifier>{ecb736ec-1145-4677-914b-60bcc7bf0932}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Engine\Nodes">
+      <UniqueIdentifier>{69aec3e6-b136-4273-a944-49dbfdf061d1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Font_Subsystem.cpp">
@@ -101,6 +104,21 @@
     </ClCompile>
     <ClCompile Include="SimpleButton.cpp">
       <Filter>Source\Engine\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuNode.cpp">
+      <Filter>Source\Engine\Nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="sprite.cpp">
+      <Filter>Source\Engine\Nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="RootNode.cpp">
+      <Filter>Source\Engine\Nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="Node.cpp">
+      <Filter>Source\Engine\Nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Source\EcoSim</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -175,6 +193,21 @@
     </ClInclude>
     <ClInclude Include="SimpleButton.h">
       <Filter>Source\Engine\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuNode.h">
+      <Filter>Source\Engine\Nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="sprite.h">
+      <Filter>Source\Engine\Nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="RootNode.h">
+      <Filter>Source\Engine\Nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="Node.h">
+      <Filter>Source\Engine\Nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Source\EcoSim</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

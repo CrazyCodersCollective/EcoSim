@@ -84,6 +84,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Node.cpp" />
+    <ClCompile Include="RootNode.cpp" />
+    <ClCompile Include="sprite.cpp" />
     <ClCompile Include="AppExit_AppState.cpp" />
     <ClCompile Include="AppFSM.cpp" />
     <ClCompile Include="AppInit_AppState.cpp" />
@@ -97,6 +101,7 @@
     <ClCompile Include="Load_AppState.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MenuButton.cpp" />
+    <ClCompile Include="MenuNode.cpp" />
     <ClCompile Include="Options_AppState.cpp" />
     <ClCompile Include="SDL_Subsystem.cpp" />
     <ClCompile Include="SimpleButton.cpp" />
@@ -107,6 +112,10 @@
     <ClCompile Include="UITexture.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="Node.h" />
+    <ClInclude Include="RootNode.h" />
+    <ClInclude Include="sprite.h" />
     <ClInclude Include="AppExit_AppState.h" />
     <ClInclude Include="AppFSM.h" />
     <ClInclude Include="AppInit_AppState.h" />
@@ -121,6 +130,7 @@
     <ClInclude Include="Image_Subsystem.h" />
     <ClInclude Include="Load_AppState.h" />
     <ClInclude Include="MenuButton.h" />
+    <ClInclude Include="MenuNode.h" />
     <ClInclude Include="Options_AppState.h" />
     <ClInclude Include="PointerBag.h" />
     <ClInclude Include="SDL_ImageLoader.h" />

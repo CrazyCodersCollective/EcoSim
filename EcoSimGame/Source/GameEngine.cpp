@@ -11,37 +11,38 @@ void GameEngine::Run()
 	application->Create();
 
 	appFSM = new AppFSM(&pointerBag);
+	screen = RootNode(pointerBag.renderer, 0, 0);
 
 	// Setup the game
-	Setup();
+	StartUp();
 
 	while (pointerBag.isRunning)
 	{
-		appFSM->UpdateFSM();
+		//appFSM->UpdateFSM();
 
 		SDL_Event event;
 		while (SDL_PollEvent(&event))
 		{
 			application->HandleEvent(event);
-
+			HandleEvent(event);
 			// Piping the events through here
-			appFSM->OnEvent(event);
+			//appFSM->OnEvent(event);
 		}
 
 		// Update the game
-		appFSM->OnUpdate();
+		//appFSM->OnUpdate();
 
 		// Render the game
 		application->RenderBegin();
-		appFSM->OnRender();
-		appFSM->OnRenderUI();
+		screen.render();
+		//appFSM->OnRender();
+		//appFSM->OnRenderUI();
 		application->RenderEnd();
 	}
 
 	delete appFSM;
-
+	screen.Destroy();//fix el
 	application->Destroy();
 	delete application;
-
 	Subsystems::Shutdown();
 }
