@@ -105,9 +105,6 @@
     <ClCompile Include="SimpleButton.cpp">
       <Filter>Source\Engine\UI</Filter>
     </ClCompile>
-    <ClCompile Include="MenuNode.cpp">
-      <Filter>Source\Engine\Nodes</Filter>
-    </ClCompile>
     <ClCompile Include="sprite.cpp">
       <Filter>Source\Engine\Nodes</Filter>
     </ClCompile>
@@ -125,6 +122,9 @@
       <Filter>Source\Engine\Nodes</Filter>
     </ClCompile>
     <ClCompile Include="glhelper.cpp" />
+    <ClCompile Include="StateNode.cpp">
+      <Filter>Source\Engine\Nodes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Font_Subsystem.h">
@@ -199,9 +199,6 @@
     <ClInclude Include="SimpleButton.h">
       <Filter>Source\Engine\UI</Filter>
     </ClInclude>
-    <ClInclude Include="MenuNode.h">
-      <Filter>Source\Engine\Nodes</Filter>
-    </ClInclude>
     <ClInclude Include="sprite.h">
       <Filter>Source\Engine\Nodes</Filter>
     </ClInclude>
@@ -224,5 +221,8 @@
       <Filter>Source\Engine\Nodes</Filter>
     </ClInclude>
     <ClInclude Include="glhelper.h" />
+    <ClInclude Include="StateNode.h">
+      <Filter>Source\Engine\Nodes</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

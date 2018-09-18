@@ -4,7 +4,7 @@
 #include "Application.h"
 #include "AppFSM.h"
 #include "RootNode.h"
-#include "MenuNode.h"
+#include "StateNode.h"
 class GameEngine
 {
 public:
@@ -12,7 +12,7 @@ public:
 	virtual ~GameEngine() {}
 	void Run();
 	RootNode screen;
-	MenuNode states;
+	StateNode states;
 
 protected:
 	virtual void StartUp() = 0;

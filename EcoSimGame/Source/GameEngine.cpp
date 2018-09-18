@@ -12,7 +12,7 @@ void GameEngine::Run()
 
 	//appFSM = new AppFSM(&pointerBag);
 	screen = RootNode(pointerBag.renderer, 0, 0);
-	states = MenuNode(&pointerBag);
+	states = StateNode(&pointerBag);
 
 	// Setup the game
 	StartUp();
