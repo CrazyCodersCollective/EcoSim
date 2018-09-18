@@ -120,6 +120,11 @@
     <ClCompile Include="Game.cpp">
       <Filter>Source\EcoSim</Filter>
     </ClCompile>
+    <ClCompile Include="MouseCursor.cpp" />
+    <ClCompile Include="ButtonNode.cpp">
+      <Filter>Source\Engine\Nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="glhelper.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Font_Subsystem.h">
@@ -212,5 +217,12 @@
     <ClInclude Include="MouseCursor.h">
       <Filter>Source\Engine\UI</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\json-develop\json-develop\single_include\nlohmann\json.hpp">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="ButtonNode.h">
+      <Filter>Source\Engine\Nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="glhelper.h" />
   </ItemGroup>
 </Project>

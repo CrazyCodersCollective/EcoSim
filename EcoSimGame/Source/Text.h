@@ -41,7 +41,7 @@ private:
 	float posY;
 
 	/* Texture */
-	SDL_Texture* texture;
+	SDL_Texture* texture = nullptr;
 	SDL_Rect dest;
 	bool UpdateTexture();
 

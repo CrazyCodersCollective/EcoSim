@@ -84,7 +84,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ButtonNode.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="glhelper.cpp" />
     <ClCompile Include="Node.cpp" />
     <ClCompile Include="RootNode.cpp" />
     <ClCompile Include="sprite.cpp" />
@@ -113,7 +115,10 @@
     <ClCompile Include="UITexture.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\json-develop\json-develop\single_include\nlohmann\json.hpp" />
+    <ClInclude Include="ButtonNode.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="glhelper.h" />
     <ClInclude Include="Node.h" />
     <ClInclude Include="RootNode.h" />
     <ClInclude Include="sprite.h" />

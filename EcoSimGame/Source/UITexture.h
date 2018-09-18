@@ -14,7 +14,7 @@ public:
 private:
 	SDL_Renderer* renderer;
 
-	SDL_Texture* texture;
+	SDL_Texture* texture = nullptr;
 	SDL_Rect rect;
 
 	void LoadFile(std::string filePath);

@@ -18,7 +18,7 @@ public:
 	void SetPos(float x, float y);
 	void AddPos(float x, float y);
 	void AddChild(Node* node);
-
+	
 	
 	float x = 0 ;//add seter and getter
 	float y = 0;//add seter and getter
@@ -32,7 +32,7 @@ public:
 protected:
 	Node* master = nullptr;
 	SDL_Rect dest;
-
+	void NewPos();
 	
 
 };

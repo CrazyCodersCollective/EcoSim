@@ -5,10 +5,10 @@
 
 #include <assert.h>
 
-AppFSM::AppFSM(PointerBag* pointerBag) : pointerBag(pointerBag)
+AppFSM::AppFSM(PointerBag* pointerBag) 
 {
 	pointerBag->appFSM = this;
-
+	this->pointerBag = pointerBag;
 	vAppStates.push_back(new AppInit_AppState(pointerBag));
 	vAppStates.push_back(new AppExit_AppState(pointerBag));
 	

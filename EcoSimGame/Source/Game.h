@@ -4,6 +4,7 @@
 #include "Font.h"
 #include "Text.h"
 #include "sprite.h"
+#include "ButtonNode.h"
 
 
 class Game : public GameEngine
@@ -24,5 +25,6 @@ private:
 	/* Game stuffs */
 	Sprite* TestSprite;
 	Sprite* TestSprite2;
+	ButtonNode* butt;
 	
 };

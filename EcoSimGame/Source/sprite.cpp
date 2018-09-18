@@ -15,8 +15,7 @@ Sprite::Sprite(Node* master, int x, int y, std::string file)
 	if (master->renderer == NULL)printf("null pointer in spritenode init");
 	//this->renderer = master->renderer;
 	master->AddChild(this);
-	this->x = (float)x;
-	this->y = (float)y;
+	SetPos(x, y);
 
 	Texture(file);
 }
@@ -27,6 +26,9 @@ Sprite::~Sprite()
 }
 
 void Sprite::render() {
+	for (int i = 0; i < children.size(); i++) {
+		children[i]->render();
+	}
 	if (renderer && texture)//madatory texture or test for textutr eeach frame?
 		SDL_RenderCopy(renderer, texture, NULL, &dest);
 }

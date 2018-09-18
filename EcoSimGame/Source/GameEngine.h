@@ -4,6 +4,7 @@
 #include "Application.h"
 #include "AppFSM.h"
 #include "RootNode.h"
+#include "MenuNode.h"
 class GameEngine
 {
 public:
@@ -11,6 +12,7 @@ public:
 	virtual ~GameEngine() {}
 	void Run();
 	RootNode screen;
+	MenuNode states;
 
 protected:
 	virtual void StartUp() = 0;
@@ -20,7 +22,9 @@ protected:
 	virtual void Render() = 0;
 	AppFSM* appFSM;
 	PointerBag pointerBag; // origin
+	
 
 private:
 	Application* application;
+
 };

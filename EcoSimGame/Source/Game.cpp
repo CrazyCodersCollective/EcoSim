@@ -4,13 +4,30 @@
 #include "SDL_ImageLoader.h"
 #include "sprite.h"
 #include <stdlib.h> // rand()
-
+#include "Title_AppState.h"
+#include "Game_AppState.h"
+#include "GameSetup_AppState.h"
+#include "Load_AppState.h"
+#include "Options_AppState.h"
 void Game::StartUp()
 {
-	std::string texturePath = "Resource/Textures/testObject.png";
+
+	this->states.AddState(new Title_AppState(states.pointerBag));
+	this->states.AddState(new Game_AppState(states.pointerBag));
+	this->states.AddState(new GameSetup_AppState(states.pointerBag));
+	this->states.AddState(new Load_AppState(states.pointerBag));
+	this->states.AddState(new Options_AppState(states.pointerBag));
+
+	states.ChangeState("Title");
+
+
+	std::string texturePath = "Resource/Textures/testimage.png";
 	//root =  new RootNode(this->pointerBag.GetRenderer());
+	butt = new ButtonNode(&screen, SDL_Rect{ 100, 100, 100, 100 }, "hello");
 	TestSprite = new Sprite(&screen, 100, 100, texturePath);//we dont need add it to the screeen with addchild becaue the firt paramiter will do that for us 
-	//TestSprite->Texture(texturePath);
+	
+	butt->SetText("hello");
+															//TestSprite->Texture(texturePath);
 	//AddChild(TestSprite);
 	//TestSprite->Texture(texturePath);
 

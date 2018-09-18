@@ -22,18 +22,24 @@ Node::Node(SDL_Renderer* renderer, int xp , int yp) {
 void Node::SetPos(float xp, float yp) {
 	this->x = xp;
 	this->y = yp;
-	dest.x = (int)xp;// +master->x;
-	dest.y = (int)yp;// +master->y;
+	NewPos();
 }
 void Node::AddPos(float xp, float yp) {
 	this->x += xp;
 	this->y += yp;
-	dest.x = (int)x + master->x;
-	dest.y = (int)y + master->y;
+	
+	NewPos();
+}
+void Node::NewPos() {
+	dest.x = x + master->x;
+	dest.y = y + master->y;
+	for (int i = 0; i < children.size(); i++) {
+		children[i]->NewPos();
+	}
 }
 void Node::AddChild(Node* node) {
 	node->screen = master->screen;
-	node->master = master;
+	node->master = this;
 	node->renderer = master->renderer;
 
 	children.push_back(node);//add sort insertion sort by z

@@ -14,6 +14,7 @@
 class AppFSM
 {
 public:
+	AppFSM() {}
 	AppFSM(PointerBag* pointerBag);
 	virtual ~AppFSM();
 
@@ -30,10 +31,11 @@ public:
 	void OnRenderUI();
 
 	// Getter
-	PointerBag* GetPointerBag() { return pointerBag; }
+	PointerBag* pointerBag;
+	//PointerBag* GetPointerBag() { return pointerBag; }
 		
 private:
-	PointerBag* pointerBag;
+	//PointerBag* pointerBag;
 
 	std::vector<AppState*> vAppStates;
 	int activeState;

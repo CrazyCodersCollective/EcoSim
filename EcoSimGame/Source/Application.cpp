@@ -1,5 +1,6 @@
 #include "Application.h"
 #include <stdio.h>
+#include "SDL_opengl.h"
 
 Application::Application(PointerBag* pointerBag)
 {
@@ -23,6 +24,8 @@ bool Application::Create()
 		return false;
 	}
 	pointerBag->renderer = renderer; // a copy for quick lookup
+
+	SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "1");
 
 	return true;
 }

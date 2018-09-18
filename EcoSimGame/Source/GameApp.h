@@ -18,11 +18,11 @@ public:
 private:
 	void Setup()
 	{
-		appFSM->AddState(new Title_AppState(appFSM->GetPointerBag()));
-		appFSM->AddState(new Game_AppState(appFSM->GetPointerBag()));
-		appFSM->AddState(new GameSetup_AppState(appFSM->GetPointerBag()));
-		appFSM->AddState(new Load_AppState(appFSM->GetPointerBag()));
-		appFSM->AddState(new Options_AppState(appFSM->GetPointerBag()));
+		appFSM->AddState(new Title_AppState(appFSM->pointerBag));
+		appFSM->AddState(new Game_AppState(appFSM->pointerBag));
+		appFSM->AddState(new GameSetup_AppState(appFSM->pointerBag));
+		appFSM->AddState(new Load_AppState(appFSM->pointerBag));
+		appFSM->AddState(new Options_AppState(appFSM->pointerBag));
 
 		appFSM->ChangeState("Title");
 	}
