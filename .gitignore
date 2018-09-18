@@ -26,6 +26,14 @@
 *.a
 *.lib
 
+# Visual Studio files
+*.pdb
+*.idb
+*.ilk
+*.iobj
+*.ipdb
+*.ipch
+
 # Executables
 *.exe
 *.out
