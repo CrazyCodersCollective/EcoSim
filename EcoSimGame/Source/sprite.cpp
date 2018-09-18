@@ -5,7 +5,7 @@
 
 
 
-Sprite::Sprite(Node* master, int x, int y, std::string file)
+Sprite::Sprite(Node* master, int x, int y, const std::string & file)
 {
 
 	//Node::Node(master->renderer, x, y); get this working

@@ -5,7 +5,7 @@
 ButtonNode::ButtonNode()
 {
 }
-ButtonNode::ButtonNode(Node* master, SDL_Rect pos, std::string text)
+ButtonNode::ButtonNode(Node* master, SDL_Rect pos, const std::string & text)
 {
 	master->AddChild(this);
 	font.LoadFont("Resource/Fonts/monogram.ttf", 28);
@@ -14,7 +14,7 @@ ButtonNode::ButtonNode(Node* master, SDL_Rect pos, std::string text)
 	dest = pos;
 
 }
-bool ButtonNode::SetText(std::string text) {
+bool ButtonNode::SetText(const std::string & text) {
 
 	if (UpTexture)
 		SDL_DestroyTexture(UpTexture);

@@ -5,7 +5,9 @@
 class UITexture
 {
 public:
-	UITexture(SDL_Renderer* renderer, std::string filePath) { this->renderer = renderer; LoadFile(filePath); }
+	UITexture(SDL_Renderer* renderer, const std::string& filePath)
+    { this->renderer = renderer; LoadFile(filePath); }
+
 	virtual ~UITexture() { FreeTexture(); }
 
 	SDL_Texture* GetTexture() { return texture; }
@@ -17,6 +19,6 @@ private:
 	SDL_Texture* texture = nullptr;
 	SDL_Rect rect;
 
-	void LoadFile(std::string filePath);
+	void LoadFile(const std::string& filePath);
 	void FreeTexture();
 };

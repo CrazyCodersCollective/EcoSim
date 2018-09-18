@@ -8,9 +8,9 @@ class ButtonNode :
 {
 public:
 	ButtonNode();
-	ButtonNode(Node* master, SDL_Rect pos, std::string text);
+	ButtonNode(Node* master, SDL_Rect pos, const std::string & text);
 	~ButtonNode();
-	bool SetText(std::string text);
+	bool SetText(const std::string& text);
 	
 
 private:

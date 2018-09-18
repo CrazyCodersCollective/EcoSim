@@ -22,7 +22,7 @@ public:
 
 	void AddState(AppState* appState);
 	//void RemoveState(std::string stateName); // TODO(kim): implement code
-	void ChangeState(std::string stateName);
+	void ChangeState(const std::string & stateName);
 
 	// States
 	void OnEvent(SDL_Event& event);
@@ -41,5 +41,5 @@ private:
 	int activeState;
 	int gotoState;
 
-	int FindStateByName(std::string stateName);
+	int FindStateByName(const std::string & stateName);
 };

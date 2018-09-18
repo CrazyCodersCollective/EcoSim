@@ -2,7 +2,7 @@
 #include "SDL_ImageLoader.h"
 #include <stdio.h>
 
-void UITexture::LoadFile(std::string filePath)
+void UITexture::LoadFile(const std::string& filePath)
 {
 	FreeTexture();
 

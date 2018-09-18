@@ -1,7 +1,7 @@
 #include "Text.h"
 #include <SDL_image.h>
 
-Text::Text(SDL_Renderer* renderer, std::string text, Font* font) : renderer(renderer), textString(text), font(font)
+Text::Text(SDL_Renderer* renderer, const std::string& text, Font* font) : renderer(renderer), textString(text), font(font)
 {
 	//this->renderer = pointerBag->GetRenderer();
 	this->activeCaching = false;

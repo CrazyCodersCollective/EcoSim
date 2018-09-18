@@ -41,6 +41,6 @@ void StateNode::Update() {
 void StateNode::AddState(AppState* state) {
 	app->AddState(state);
 }
-void StateNode::ChangeState(std::string stateName) {
+void StateNode::ChangeState(const std::string & stateName) {
 	app->ChangeState(stateName);
 }
