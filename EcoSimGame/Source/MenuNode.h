@@ -20,7 +20,7 @@ public:
 
 	PointerBag* pointerBag;
 private:
-	AppFSM app;
+	AppFSM* app;
 	RootNode* StateNow;
 };
 

@@ -5,10 +5,11 @@
 
 #include <assert.h>
 
-AppFSM::AppFSM(PointerBag* pointerBag) 
+AppFSM::AppFSM(PointerBag* pointerbag) 
 {
-	pointerBag->appFSM = this;
-	this->pointerBag = pointerBag;
+
+	//pointerBag->appFSM = this;
+	this->pointerBag = pointerbag;
 	vAppStates.push_back(new AppInit_AppState(pointerBag));
 	vAppStates.push_back(new AppExit_AppState(pointerBag));
 	
@@ -49,7 +50,7 @@ void AppFSM::ChangeState(std::string stateName)
 	if (gotoState == -1)
 	{
 		printf("ERROR: Could not find state by name: %s\n", stateName.c_str());
-		exit(1);
+		pointerBag->isRunning = false;
 	}
 }
 
@@ -79,6 +80,7 @@ int AppFSM::FindStateByName(std::string stateName)
 	{
 		if (vAppStates[i]->GetStateName() == stateName)
 		{
+			//printf(vAppStates[i]->GetStateName());
 			return i; // Success! We found the state
 		}
 	}
