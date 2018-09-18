@@ -9,7 +9,7 @@ public:
 	Font() {}
 	virtual ~Font() {}
 
-	bool LoadFont(std::string path, int size);
+	bool LoadFont(const std::string & path, int size);
 	void FreeFont();
 	
 	TTF_Font* GetFont() { return ttf_font; }

@@ -1,6 +1,6 @@
 #include "Font.h"
 
-bool Font::LoadFont(std::string path, int size)
+bool Font::LoadFont(const std::string & path, int size)
 {
 	// Open the font
 	ttf_font = TTF_OpenFont(path.c_str(), size);
