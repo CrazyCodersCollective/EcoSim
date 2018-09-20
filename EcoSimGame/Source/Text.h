@@ -6,7 +6,7 @@
 class Text
 {
 public:
-	Text(SDL_Renderer* renderer, std::string text, Font* font);
+	Text(SDL_Renderer* renderer, const std::string& text, Font* font);
 	virtual ~Text() {}
 
 	void Create(float x, float y, SDL_Color color);

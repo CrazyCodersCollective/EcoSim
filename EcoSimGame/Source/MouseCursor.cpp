@@ -3,7 +3,7 @@
 #include <SDL_image.h>
 #include <stdio.h>
 
-bool MouseCursor::Create(std::string filePath)
+bool MouseCursor::Create(const std::string & filePath)
 {
 	// Load image at specified path
 	//std::string file_path = "Resource/Textures/MouseCursorPointer.png";

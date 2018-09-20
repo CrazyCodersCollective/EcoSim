@@ -16,7 +16,7 @@ public:
 	void HandleEvent(SDL_Event& event);
 	void Update();
 	void AddState(AppState* state);
-	void ChangeState(std::string stateName);
+	void ChangeState(const std::string & stateName);
 
 	void SetState(int state);
 	void AddChild(RootNode* node);

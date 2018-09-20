@@ -44,7 +44,7 @@ void AppFSM::AddState(AppState* appState)
 	vAppStates.push_back(appState);
 }
 
-void AppFSM::ChangeState(std::string stateName)
+void AppFSM::ChangeState(const std::string & stateName)
 {
 	gotoState = FindStateByName(stateName);
 	if (gotoState == -1)
@@ -74,7 +74,7 @@ void AppFSM::OnRenderUI()
 	vAppStates.at(activeState)->OnRenderUI();
 }
 
-int AppFSM::FindStateByName(std::string stateName)
+int AppFSM::FindStateByName(const std::string & stateName)
 {
 	for (int i = 0; i < vAppStates.size(); i++)
 	{

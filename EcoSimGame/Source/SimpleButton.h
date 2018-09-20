@@ -7,7 +7,7 @@
 class SimpleButton
 {
 public:
-	SimpleButton(SDL_Renderer* renderer, Font* font, SDL_Rect rect, std::string text, SDL_Color foreColor, SDL_Color backColor);
+	SimpleButton(SDL_Renderer* renderer, Font* font, SDL_Rect rect, const std::string& text, SDL_Color foreColor, SDL_Color backColor);
 	virtual ~SimpleButton();
 
 	bool EventMouseHover(SDL_Event& event);

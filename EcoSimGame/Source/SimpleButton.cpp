@@ -1,6 +1,11 @@
 #include "SimpleButton.h"
 
-SimpleButton::SimpleButton(SDL_Renderer* renderer, Font* font, SDL_Rect rect, std::string text, SDL_Color foreColor, SDL_Color backColor)
+SimpleButton::SimpleButton(SDL_Renderer* renderer,
+		                   Font* font,
+						   SDL_Rect rect,
+						   const std::string & text,
+						   SDL_Color foreColor, SDL_Color backColor
+)
 	: renderer(renderer),
 	rect(rect),
 	textString(text),

@@ -8,7 +8,7 @@ public:
 	MouseCursor() {}
 	virtual ~MouseCursor() {}
 
-	bool Create(std::string filePath);
+	bool Create(const std::string & filePath);
 	void Destroy();
 
 private:
