@@ -28,9 +28,10 @@ public:
 	std::vector<Node*> children;
 	SDL_Renderer* renderer = nullptr;
 	Node* screen;
+	Node* master = nullptr;
 
 protected:
-	Node* master = nullptr;
+	
 	SDL_Rect dest;
 	void NewPos();
 	

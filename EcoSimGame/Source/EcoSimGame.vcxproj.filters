@@ -125,6 +125,9 @@
     <ClCompile Include="StateNode.cpp">
       <Filter>Source\Engine\Nodes</Filter>
     </ClCompile>
+    <ClCompile Include="GameRootNode.cpp">
+      <Filter>Source\EcoSim\AppStates</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Font_Subsystem.h">
@@ -223,6 +226,9 @@
     <ClInclude Include="glhelper.h" />
     <ClInclude Include="StateNode.h">
       <Filter>Source\Engine\Nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="GameRootNode.h">
+      <Filter>Source\EcoSim\AppStates</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

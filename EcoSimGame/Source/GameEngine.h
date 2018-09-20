@@ -11,8 +11,8 @@ public:
 	GameEngine() {}
 	virtual ~GameEngine() {}
 	void Run();
-	RootNode screen;
-	StateNode states;
+	//RootNode screen;
+	StateNode* states = nullptr;
 
 protected:
 	virtual void StartUp() = 0;

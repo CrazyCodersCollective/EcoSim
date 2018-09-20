@@ -45,7 +45,9 @@ void Node::AddChild(Node* node) {
 	children.push_back(node);//add sort insertion sort by z
  }
 void Node::render() {
+	//printf("render");
 	for (int i = 0; i < children.size(); i++) {
+		//if (children[i].)printf("null");
 		children[i]->render();
 	}
 }

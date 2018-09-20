@@ -23,8 +23,9 @@ private:
 	void Render();
 
 	/* Game stuffs */
-	Sprite* TestSprite;
-	Sprite* TestSprite2;
-	ButtonNode* butt;
+	//Sprite* TestSprite;
+	//Sprite* TestSprite2;
+	//ButtonNode* butt;
+	RootNode* test;
 	
 };

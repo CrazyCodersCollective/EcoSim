@@ -18,9 +18,14 @@ public:
 	void AddState(AppState* state);
 	void ChangeState(std::string stateName);
 
+	void SetState(int state);
+	void AddChild(RootNode* node);
+
 	PointerBag* pointerBag;
+	RootNode* StateNow;
 private:
 	AppFSM* app;
-	RootNode* StateNow;
+	//RootNode* StateNow;
+	std::vector<RootNode*> states;
 };
 
