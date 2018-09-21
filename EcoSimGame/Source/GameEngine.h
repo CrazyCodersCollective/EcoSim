@@ -17,10 +17,6 @@ public:
 protected:
 	virtual void StartUp() = 0;
 	virtual void Shutdown() = 0;
-	virtual void HandleEvent(SDL_Event& event) = 0;
-	virtual void Update() = 0;
-	virtual void Render() = 0;
-	AppFSM* appFSM;
 	PointerBag pointerBag; // origin
 	
 

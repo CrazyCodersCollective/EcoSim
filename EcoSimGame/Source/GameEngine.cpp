@@ -17,13 +17,17 @@ void GameEngine::Run()
 	// Setup the game
 
 	StartUp();
-	states->SetState(0);
-	states->StateNow->StartUp();
+	std::string gg = "Game";
+	states->ChangeState(gg);
+	//states->StateNow->StartUp();
 
 	while (pointerBag.isRunning)
 	{
-		//appFSM->UpdateFSM();
-		//states.UpdateState();
+		if (states->StateNow->NextState != "") {
+			if (!states->ChangeState(states->StateNow->NextState))
+				printf("state not found:%s\n", states->StateNow->NextState.c_str());
+			states->StateNow->NextState = "";
+		}
 		SDL_Event event;
 		while (SDL_PollEvent(&event))
 		{

@@ -22,14 +22,8 @@ int main(int argc, char* argv[])
     chdir( cwd.c_str());  // set the working directory
  #endif
 
-	//GameApp* gameApp = new GameApp();
-	//gameApp->Run();
-	//delete gameApp;
-
 	Game* game = new Game();
 	game->Run();
 	delete game;
-	return 0;
-
 	return 0;
 }

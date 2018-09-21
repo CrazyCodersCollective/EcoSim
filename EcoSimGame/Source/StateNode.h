@@ -1,31 +1,26 @@
 #pragma once
 #include "RootNode.h"
-#include "AppFSM.h"
+//#include "AppFSM.h"
 #include "PointerBag.h"
+#include <vector>
 
 class StateNode :
-	public RootNode
+	public Node
 {
 public:
 	StateNode();
 	StateNode(PointerBag* pointerbag);
 	~StateNode();
-	//AppFSM* app;
 	void render();
-	void UpdateState();
-	void HandleEvent(SDL_Event& event);
-	void Update();
-	void AddState(AppState* state);
-	void ChangeState(const std::string & stateName);
+
 
 	void SetState(int state);
+	bool ChangeState(std::string& state);
 	void AddChild(RootNode* node);
 
 	PointerBag* pointerBag;
 	RootNode* StateNow;
 private:
-	AppFSM* app;
-	//RootNode* StateNow;
 	std::vector<RootNode*> states;
 };
 

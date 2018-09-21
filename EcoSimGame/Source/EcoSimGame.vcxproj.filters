@@ -40,6 +40,9 @@
     <Filter Include="Source\Engine\Nodes">
       <UniqueIdentifier>{69aec3e6-b136-4273-a944-49dbfdf061d1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\EcoSim\AppStates\old code">
+      <UniqueIdentifier>{729d3abc-91d0-4024-908b-bc46e193c196}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Font_Subsystem.cpp">
@@ -72,12 +75,6 @@
     <ClCompile Include="AppFSM.cpp">
       <Filter>Source\Engine\AppFSM</Filter>
     </ClCompile>
-    <ClCompile Include="Title_AppState.cpp">
-      <Filter>Source\EcoSim\AppStates</Filter>
-    </ClCompile>
-    <ClCompile Include="Game_AppState.cpp">
-      <Filter>Source\EcoSim\AppStates</Filter>
-    </ClCompile>
     <ClCompile Include="TitleMenu.cpp">
       <Filter>Source\EcoSim\Title</Filter>
     </ClCompile>
@@ -92,15 +89,6 @@
     </ClCompile>
     <ClCompile Include="UITexture.cpp">
       <Filter>Source\Engine\UI</Filter>
-    </ClCompile>
-    <ClCompile Include="Load_AppState.cpp">
-      <Filter>Source\EcoSim\AppStates</Filter>
-    </ClCompile>
-    <ClCompile Include="Options_AppState.cpp">
-      <Filter>Source\EcoSim\AppStates</Filter>
-    </ClCompile>
-    <ClCompile Include="GameSetup_AppState.cpp">
-      <Filter>Source\EcoSim\AppStates</Filter>
     </ClCompile>
     <ClCompile Include="SimpleButton.cpp">
       <Filter>Source\Engine\UI</Filter>
@@ -121,12 +109,32 @@
     <ClCompile Include="ButtonNode.cpp">
       <Filter>Source\Engine\Nodes</Filter>
     </ClCompile>
-    <ClCompile Include="glhelper.cpp" />
     <ClCompile Include="StateNode.cpp">
       <Filter>Source\Engine\Nodes</Filter>
     </ClCompile>
     <ClCompile Include="GameRootNode.cpp">
       <Filter>Source\EcoSim\AppStates</Filter>
+    </ClCompile>
+    <ClCompile Include="glhelper.cpp">
+      <Filter>Source\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="GameSetupRootNode.cpp">
+      <Filter>Source\EcoSim\AppStates</Filter>
+    </ClCompile>
+    <ClCompile Include="Game_AppState.cpp">
+      <Filter>Source\EcoSim\AppStates\old code</Filter>
+    </ClCompile>
+    <ClCompile Include="GameSetup_AppState.cpp">
+      <Filter>Source\EcoSim\AppStates\old code</Filter>
+    </ClCompile>
+    <ClCompile Include="Title_AppState.cpp">
+      <Filter>Source\EcoSim\AppStates\old code</Filter>
+    </ClCompile>
+    <ClCompile Include="Options_AppState.cpp">
+      <Filter>Source\EcoSim\AppStates\old code</Filter>
+    </ClCompile>
+    <ClCompile Include="Load_AppState.cpp">
+      <Filter>Source\EcoSim\AppStates\old code</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -166,12 +174,6 @@
     <ClInclude Include="AppState.h">
       <Filter>Source\Engine\AppFSM</Filter>
     </ClInclude>
-    <ClInclude Include="Title_AppState.h">
-      <Filter>Source\EcoSim\AppStates</Filter>
-    </ClInclude>
-    <ClInclude Include="Game_AppState.h">
-      <Filter>Source\EcoSim\AppStates</Filter>
-    </ClInclude>
     <ClInclude Include="TitleMenu.h">
       <Filter>Source\EcoSim\Title</Filter>
     </ClInclude>
@@ -189,15 +191,6 @@
     </ClInclude>
     <ClInclude Include="GameApp.h">
       <Filter>Source\EcoSim</Filter>
-    </ClInclude>
-    <ClInclude Include="Load_AppState.h">
-      <Filter>Source\EcoSim\AppStates</Filter>
-    </ClInclude>
-    <ClInclude Include="Options_AppState.h">
-      <Filter>Source\EcoSim\AppStates</Filter>
-    </ClInclude>
-    <ClInclude Include="GameSetup_AppState.h">
-      <Filter>Source\EcoSim\AppStates</Filter>
     </ClInclude>
     <ClInclude Include="SimpleButton.h">
       <Filter>Source\Engine\UI</Filter>
@@ -217,18 +210,38 @@
     <ClInclude Include="MouseCursor.h">
       <Filter>Source\Engine\UI</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\json-develop\json-develop\single_include\nlohmann\json.hpp">
-      <Filter>Source</Filter>
-    </ClInclude>
     <ClInclude Include="ButtonNode.h">
       <Filter>Source\Engine\Nodes</Filter>
     </ClInclude>
-    <ClInclude Include="glhelper.h" />
     <ClInclude Include="StateNode.h">
       <Filter>Source\Engine\Nodes</Filter>
     </ClInclude>
     <ClInclude Include="GameRootNode.h">
       <Filter>Source\EcoSim\AppStates</Filter>
+    </ClInclude>
+    <ClInclude Include="glhelper.h">
+      <Filter>Source\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="GameSetupRootNode.h">
+      <Filter>Source\EcoSim\AppStates</Filter>
+    </ClInclude>
+    <ClInclude Include="Game_AppState.h">
+      <Filter>Source\EcoSim\AppStates\old code</Filter>
+    </ClInclude>
+    <ClInclude Include="GameSetup_AppState.h">
+      <Filter>Source\EcoSim\AppStates\old code</Filter>
+    </ClInclude>
+    <ClInclude Include="Title_AppState.h">
+      <Filter>Source\EcoSim\AppStates\old code</Filter>
+    </ClInclude>
+    <ClInclude Include="Options_AppState.h">
+      <Filter>Source\EcoSim\AppStates\old code</Filter>
+    </ClInclude>
+    <ClInclude Include="Load_AppState.h">
+      <Filter>Source\EcoSim\AppStates\old code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\json-develop\json-develop\single_include\nlohmann\json.hpp">
+      <Filter>Source\EcoSim</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

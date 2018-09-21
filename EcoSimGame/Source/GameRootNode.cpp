@@ -1,9 +1,9 @@
 #include "GameRootNode.h"
 
 
-
 GameRootNode::GameRootNode()
 {
+	State = "Game";
 	//RootNode::RootNode(renderer, x, y); SDL_Renderer* renderer, int x, int y
 }
 
@@ -13,12 +13,35 @@ GameRootNode::~GameRootNode()
 }
 
 void GameRootNode::StartUp(){
-	//sp = Sprite(thi	)
+	
 	std::string texturePath = "Resource/Textures/testObject.png";
-	//root =  new RootNode(this->pointerBag.GetRenderer());
-	//butt = new ButtonNode(&screen, SDL_Rect{ 100, 100, 100, 100 }, "hello");
 	sp = new Sprite(this, 100, 100, texturePath);
 
-	this->AddChild(sp);
+}
+void GameRootNode::HandleEvent(SDL_Event& event) {
+	switch (event.type)
+	{
+	case SDL_KEYDOWN:
+	{
+		switch (event.key.keysym.sym)
+		{
+		case SDLK_ESCAPE:
+		{
+			//pointerBag->isRunning = false;
+		} break;
+		case SDLK_q:
+		{
+			//pointerBag->appFSM->ChangeState("Title");
+			//printf(NextState.c_str());
+			NextState = "GameSetUp";
+			
+		} break;
+		default:
+			break;
+		}
+	} break;
+	}
+}
+void GameRootNode::Update() {
 
 }

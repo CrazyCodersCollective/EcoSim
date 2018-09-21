@@ -9,8 +9,8 @@ public:
 	GameRootNode();
 	~GameRootNode();
 	void StartUp();
-	//void HandleEvent(SDL_Event& event);
-	//void Update(); 
+	void HandleEvent(SDL_Event& event);
+	void Update();
 private:
 	Sprite* sp;
 };

@@ -1,6 +1,7 @@
 
 #pragma once
 #include "Node.h"
+#include "json.hpp"
 
 class RootNode :
 	public Node
@@ -12,7 +13,11 @@ public:
 	virtual void StartUp() {};
 	virtual void HandleEvent(SDL_Event& event) {};
 	virtual void Update() {};
-	//virtual void Shutdown() = 0;
-	//virtual void Render() = 0;
+	RootNode* Fromjson(std::string* filepath);
+
+	bool init = true;
+	std::string State = "";
+	std::string NextState = "";
+
 };
 

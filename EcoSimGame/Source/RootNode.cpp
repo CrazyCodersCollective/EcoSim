@@ -18,3 +18,14 @@ RootNode::RootNode(SDL_Renderer* renderer, int x, int y) //: Node.renderer(rende
 RootNode::~RootNode()
 {
 }
+
+
+
+RootNode* RootNode::Fromjson(std::string* filepath) {
+	RootNode* node = new RootNode();
+	
+	//prosses
+
+	return node;
+}
+

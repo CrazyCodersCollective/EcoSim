@@ -18,14 +18,11 @@ private:
 	/* GameEngine */
 	void StartUp();
 	void Shutdown();
-	void HandleEvent(SDL_Event& event);
-	void Update();
-	void Render();
+
+
 
 	/* Game stuffs */
-	//Sprite* TestSprite;
-	//Sprite* TestSprite2;
-	//ButtonNode* butt;
+
 	RootNode* test;
 	
 };

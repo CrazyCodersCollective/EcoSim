@@ -18,8 +18,8 @@ static SDL_Texture* SDL_ImageLoader_LoadTexture(SDL_Renderer *renderer, const st
 	if (loadedSurface == NULL)
 	{
 		// On unixoid systems errors should be printed to std::cerr.
-		std::cerr << "ERROR: Unable to load image " << file_path
-				  << "! SDL_image Error: " << IMG_GetError() << '\n';
+//		std::cerr << "ERROR: Unable to load image " << file_path
+			//	  << "! SDL_image Error: " << IMG_GetError() << '\n';
 		// TODO(kim): implement error logging
 	}
 	else
@@ -29,8 +29,8 @@ static SDL_Texture* SDL_ImageLoader_LoadTexture(SDL_Renderer *renderer, const st
 		if (newTexture == NULL)
 		{
 			// On unixoid sysems errors should be printed to the error stream.
-			std::cerr << "ERROR: Unable to create texture from " << file_path
-					  << "! SDL Error: " <<  SDL_GetError() << '\n';
+			//std::cerr << "ERROR: Unable to create texture from " << file_path
+				//	  << "! SDL Error: " <<  SDL_GetError() << '\n';
 			// TODO(kim): implement error logging
 		}
 
