@@ -1,6 +1,6 @@
 #include "Node.h"
-
-
+#include <iostream>
+#include <algorithm>
 
 Node::Node(Node* master, int xp, int yp){
 	
@@ -47,4 +47,12 @@ void Node::render() {
 	for (int i = 0; i < children.size(); i++) {
 		children[i]->render();
 	}
+}
+
+void Node::SetZ(int zz) {
+	z = zz;
+	std::sort(master->children.begin(), master->children.end());
+}
+int Node::GetZ() {
+	return z;
 }

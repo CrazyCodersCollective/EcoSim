@@ -1,0 +1,51 @@
+#ifdef GL_ES
+precision mediump float;
+#endif
+
+#extension GL_OES_standard_derivatives : enable
+
+uniform vec2 resolution;
+//uniform vec3 colour1;
+//unifrom vec3 colour2;
+//uniform vec3 colourb;
+//uniform float r;
+
+void main( void ) {
+	vec3 colour1 = vec3(1, 1, 1);
+	vec3 colour2 = vec3(0.5, 0.6, 0.7);
+	vec4 colourb = vec4(0.0, 0.0, 1.0, 1.0);
+	float bw = 30.0;
+	float r = 0.3;
+	
+	
+	float rad1 = (min(resolution.y, resolution.x)/2.0);
+	float rad = (min(resolution.y, resolution.x)/2.0)*r;
+	float bwr = rad - bw;
+	
+	vec2 position = ( gl_FragCoord.xy / resolution.xy );
+	float a = length( gl_FragCoord.xy  - (vec2(0, 0.5) * resolution.xy) - vec2(rad, (1.0-r)*(rad1)));
+	float b = length( gl_FragCoord.xy  - (vec2(1, 0.5) * resolution.xy) + vec2(rad, (1.0-r)*(rad1)));
+	float c = length( gl_FragCoord.xy  - (vec2(0, 0.5) * resolution.xy) - vec2(rad, -(1.0-r)*(rad1)));
+	float d = length( gl_FragCoord.xy  - (vec2(1, 0.5) * resolution.xy) + vec2(rad, -(1.0-r)*(rad1)));
+	
+	
+	if (b  < rad || a < rad ||c  < rad || d < rad || (gl_FragCoord.x >  rad && gl_FragCoord.x  < resolution.x - rad) || (gl_FragCoord.y >  rad && gl_FragCoord.y  < resolution.y - rad)) {
+		if (b  < bwr || a < bwr ||c  < bwr || d < bwr){
+			gl_FragColor = vec4( (colour1*position.y) + (colour2*(1.0 - position.y)) , 1);
+		}
+		else{
+			if ((  gl_FragCoord.x >  rad - bw && gl_FragCoord.x  < resolution.x - rad - bw && gl_FragCoord.y > bw && gl_FragCoord.y < resolution.y - bw) || (gl_FragCoord.y >  rad && gl_FragCoord.y  < resolution.y - rad && gl_FragCoord.x > bw && gl_FragCoord.x < resolution.x - bw )){
+				gl_FragColor = vec4( (colour1*position.y) + (colour2*(1.0 - position.y)) , 1);
+			}
+			else{
+				gl_FragColor = colourb;
+			}
+		}
+		
+	}
+	else {
+		gl_FragColor = vec4(0,1,0,1);
+	}
+
+
+}

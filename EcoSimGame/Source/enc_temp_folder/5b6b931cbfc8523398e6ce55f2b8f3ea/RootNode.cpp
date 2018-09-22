@@ -122,7 +122,9 @@ void RootNode::ProssesSprite(Node* node, nlohmann::json j) {
 void RootNode::ProssesButton(Node* node, nlohmann::json j) {
 	ButtonNode* butt = new ButtonNode();
 	node->AddChild(butt);
-	
+	std::string text = j.value("text", "defult");
+	if (text != "")
+		butt->SetText("bhhh");
 	nlohmann::json pos = j.value("pos", nlohmann::json::array({10,10}));
 	butt->SetPos(pos[0], pos[1]);
 	printf("buttin");
@@ -138,10 +140,6 @@ void RootNode::ProssesButton(Node* node, nlohmann::json j) {
 	//j.value("bgBottom", 28);
 	//j.value("borderColour", 28);
 	//j.value("textColor", 28);
-
-	std::string text = j.value("text", "defult");
-	if (text != "")
-		butt->SetText(text);
 
 
 
