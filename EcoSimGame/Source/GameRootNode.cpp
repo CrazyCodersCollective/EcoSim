@@ -1,5 +1,5 @@
 #include "GameRootNode.h"
-
+#include "TextNode.h"
 
 GameRootNode::GameRootNode()
 {
@@ -15,7 +15,12 @@ GameRootNode::~GameRootNode()
 void GameRootNode::StartUp(){
 	
 	std::string texturePath = "Resource/Textures/testObject.png";
-	sp = new Sprite(this, 100, 100, texturePath);
+	
+	text = new TextNode(this, 200, 300);
+	SDL_Color* co = new SDL_Color{255,0,0,255 };
+	text->SetText("Game! Press Q to return", 28, co);
+
+	//sp = new Sprite(this, 100, 100, texturePath);
 
 }
 void GameRootNode::HandleEvent(SDL_Event& event) {
@@ -27,7 +32,7 @@ void GameRootNode::HandleEvent(SDL_Event& event) {
 		{
 		case SDLK_ESCAPE:
 		{
-			//pointerBag->isRunning = false;
+			pointerbag->isRunning = false;
 		} break;
 		case SDLK_q:
 		{
@@ -35,6 +40,13 @@ void GameRootNode::HandleEvent(SDL_Event& event) {
 			//printf(NextState.c_str());
 			NextState = "GameSetUp";
 			
+		} break;
+		case SDLK_w:
+		{
+			//pointerBag->appFSM->ChangeState("Title");
+			//printf(NextState.c_str());
+			NextState = "json";
+
 		} break;
 		default:
 			break;

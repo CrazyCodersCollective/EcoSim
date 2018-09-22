@@ -1,6 +1,7 @@
 #pragma once
 #include "RootNode.h"
-#include "sprite.h"
+#include "SpriteNode.h"
+#include "TextNode.h"
 class GameRootNode :
 	public RootNode
 {
@@ -13,5 +14,6 @@ public:
 	void Update();
 private:
 	Sprite* sp;
+	TextNode* text;
 };
 

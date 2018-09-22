@@ -36,6 +36,7 @@ void StateNode::AddChild(RootNode* node) {
 	node->screen = this;
 	node->master = this;
 	node->renderer = renderer;
+	node->pointerbag = pointerBag;
 	
 
 	states.push_back(node);//add sort insertion sort by z

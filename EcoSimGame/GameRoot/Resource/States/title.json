@@ -1,0 +1,17 @@
+{
+"name":"start",
+"Nodes":{
+	"Button":{
+		"text":"test button",
+		"pos":[200, 200]
+		},
+	"Sprite":{
+		"image":"Resource/Textures/TitleScreen.png",
+		"pos":[0,0]
+		},
+	"Button":{
+		"text":"test button",
+		"pos":[200, 200]
+		}
+	}
+}

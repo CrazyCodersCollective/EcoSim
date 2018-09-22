@@ -93,9 +93,6 @@
     <ClCompile Include="SimpleButton.cpp">
       <Filter>Source\Engine\UI</Filter>
     </ClCompile>
-    <ClCompile Include="sprite.cpp">
-      <Filter>Source\Engine\Nodes</Filter>
-    </ClCompile>
     <ClCompile Include="RootNode.cpp">
       <Filter>Source\Engine\Nodes</Filter>
     </ClCompile>
@@ -135,6 +132,15 @@
     </ClCompile>
     <ClCompile Include="Load_AppState.cpp">
       <Filter>Source\EcoSim\AppStates\old code</Filter>
+    </ClCompile>
+    <ClCompile Include="TextNode.cpp">
+      <Filter>Source\Engine\Nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="SpriteNode.cpp">
+      <Filter>Source\Engine\Nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="TitleRootNode.cpp">
+      <Filter>Source\EcoSim\AppStates</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -195,9 +201,6 @@
     <ClInclude Include="SimpleButton.h">
       <Filter>Source\Engine\UI</Filter>
     </ClInclude>
-    <ClInclude Include="sprite.h">
-      <Filter>Source\Engine\Nodes</Filter>
-    </ClInclude>
     <ClInclude Include="RootNode.h">
       <Filter>Source\Engine\Nodes</Filter>
     </ClInclude>
@@ -242,6 +245,15 @@
     </ClInclude>
     <ClInclude Include="..\..\..\json-develop\json-develop\single_include\nlohmann\json.hpp">
       <Filter>Source\EcoSim</Filter>
+    </ClInclude>
+    <ClInclude Include="TextNode.h">
+      <Filter>Source\Engine\Nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="SpriteNode.h">
+      <Filter>Source\Engine\Nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="TitleRootNode.h">
+      <Filter>Source\EcoSim\AppStates</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

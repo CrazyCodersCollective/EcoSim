@@ -92,7 +92,7 @@
     <ClCompile Include="glhelper.cpp" />
     <ClCompile Include="Node.cpp" />
     <ClCompile Include="RootNode.cpp" />
-    <ClCompile Include="sprite.cpp" />
+    <ClCompile Include="SpriteNode.cpp" />
     <ClCompile Include="AppExit_AppState.cpp" />
     <ClCompile Include="AppFSM.cpp" />
     <ClCompile Include="AppInit_AppState.cpp" />
@@ -113,7 +113,9 @@
     <ClCompile Include="SimpleButton.cpp" />
     <ClCompile Include="Subsystems.cpp" />
     <ClCompile Include="Text.cpp" />
+    <ClCompile Include="TextNode.cpp" />
     <ClCompile Include="TitleMenu.cpp" />
+    <ClCompile Include="TitleRootNode.cpp" />
     <ClCompile Include="Title_AppState.cpp" />
     <ClCompile Include="UITexture.cpp" />
   </ItemGroup>
@@ -126,7 +128,7 @@
     <ClInclude Include="glhelper.h" />
     <ClInclude Include="Node.h" />
     <ClInclude Include="RootNode.h" />
-    <ClInclude Include="sprite.h" />
+    <ClInclude Include="SpriteNode.h" />
     <ClInclude Include="AppExit_AppState.h" />
     <ClInclude Include="AppFSM.h" />
     <ClInclude Include="AppInit_AppState.h" />
@@ -150,7 +152,9 @@
     <ClInclude Include="SimpleButton.h" />
     <ClInclude Include="Subsystems.h" />
     <ClInclude Include="Text.h" />
+    <ClInclude Include="TextNode.h" />
     <ClInclude Include="TitleMenu.h" />
+    <ClInclude Include="TitleRootNode.h" />
     <ClInclude Include="Title_AppState.h" />
     <ClInclude Include="UITexture.h" />
   </ItemGroup>

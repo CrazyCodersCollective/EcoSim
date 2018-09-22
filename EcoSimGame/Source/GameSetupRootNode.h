@@ -1,6 +1,6 @@
 #pragma once
 #include "RootNode.h"
-#include "sprite.h"
+#include "SpriteNode.h"
 class GameSetupRootNode:
 	public RootNode
 {

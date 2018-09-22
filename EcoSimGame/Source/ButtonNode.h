@@ -1,5 +1,5 @@
 #pragma once
-#include "sprite.h"
+#include "SpriteNode.h"
 #include <SDL_image.h>
 #include "Font.h"
 

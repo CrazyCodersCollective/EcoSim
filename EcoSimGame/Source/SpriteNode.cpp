@@ -1,6 +1,6 @@
 #include <SDL.h>
 #include "SDL_ImageLoader.h"
-#include "sprite.h"
+#include "SpriteNode.h"
 
 
 

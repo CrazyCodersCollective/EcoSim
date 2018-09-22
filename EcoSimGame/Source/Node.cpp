@@ -27,7 +27,6 @@ void Node::SetPos(float xp, float yp) {
 void Node::AddPos(float xp, float yp) {
 	this->x += xp;
 	this->y += yp;
-	
 	NewPos();
 }
 void Node::NewPos() {
@@ -41,7 +40,7 @@ void Node::AddChild(Node* node) {
 	node->screen = master->screen;
 	node->master = this;
 	node->renderer = master->renderer;
-
+	node->NewPos();
 	children.push_back(node);//add sort insertion sort by z
  }
 void Node::render() {

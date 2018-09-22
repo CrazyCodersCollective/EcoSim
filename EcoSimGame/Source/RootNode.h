@@ -8,16 +8,22 @@ class RootNode :
 {
 public:
 	RootNode();
-	RootNode(SDL_Renderer* renderer, int x = 0 , int y = 0);
+	RootNode(PointerBag* pointerbag, int x = 0 , int y = 0);
 	~RootNode();
 	virtual void StartUp() {};
 	virtual void HandleEvent(SDL_Event& event) {};
 	virtual void Update() {};
-	RootNode* Fromjson(std::string* filepath);
+	RootNode* Fromjson(const char* filepath);
 
 	bool init = true;
 	std::string State = "";
 	std::string NextState = "";
-
+	PointerBag* pointerbag = nullptr;
+private:
+	void ProssesJson(RootNode* node, nlohmann::json j);
+	void ProssesNodes(Node* node, nlohmann::json j);
+	void ProssesNode(Node* node, nlohmann::json j);
+	void ProssesSprite(Node* node, nlohmann::json j);
+	void ProssesButton(Node* node, nlohmann::json j);
 };
 

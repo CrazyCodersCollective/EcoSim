@@ -20,7 +20,7 @@ bool ButtonNode::SetText(const std::string & text) {
 		SDL_DestroyTexture(UpTexture);
 	if (DownTexture)
 		SDL_DestroyTexture(UpTexture);
-
+	font.LoadFont("Resource/Fonts/monogram.ttf", 28);
 
 	SDL_Surface* textSurface;
 

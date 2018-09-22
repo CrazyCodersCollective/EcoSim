@@ -17,7 +17,7 @@ void GameEngine::Run()
 	// Setup the game
 
 	StartUp();
-	std::string gg = "Game";
+	std::string gg = "start";
 	states->ChangeState(gg);
 	//states->StateNow->StartUp();
 
