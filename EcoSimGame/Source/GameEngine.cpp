@@ -19,7 +19,6 @@ void GameEngine::Run()
 	StartUp();
 	std::string gg = "start";
 	states->ChangeState(gg);
-	//states->StateNow->StartUp();
 
 	while (pointerBag.isRunning)
 	{

@@ -1,0 +1,120 @@
+documentation on Ellies Json loader
+
+to make a empty state you need to make a json file in "GameRoot\Resource\States",
+
+next you want to make the state in "Game::StartUp()",
+ to do this you make a RootNode and add it to the state manager with AddChild, so it will look something like this
+
+```cpp
+RootNode* NewState = new RootNode();
+states->AddChild(NewState);
+NewState->Fromjson("Resource/States/my_file.json");
+```
+
+note: don't call Fromjson before AddChild
+
+here i will describe how json structure is layed out
+
+the main file need to all be in curly brakets {mainfile}
+
+in the file you need to define the name of the state by using the "name" key
+so like this
+
+```json
+{
+"name":"my state name"
+}
+```
+ now we can switch t this state using NextState = "my state name" in the current state, to the default state in 
+GameEngine::Run() line 21 states->ChangeState(gg)
+
+
+next lets add some nodes, we need to do this under the "Nodes" key, like this
+
+```json
+{
+
+"name":"my state name",
+"Nodes": {}
+
+}
+```
+
+
+to add a nodes we need to give it a name and use the name as a key "", we also need to set the type of Node, and because my example has a Sprite I need an image and position
+
+
+```json
+{
+
+"name":"my state name",
+"Nodes": {
+	
+	"my sprite":{
+			"type":"Sprite",
+			"image":"my/image/path/image.png",
+			"pos":[100,100]
+		    
+		    }
+	
+	}
+
+}
+```
+
+that should work now.
+
+some information on the node types
+
+=============================================================================
+    _______
+    | Node|
+
+key    | value   |   default    | decription
+_________________|______________|
+"type" : "Node"  |    "None"	|the type of Node
+"pos"  : [x,y]   |    [0,0]	|the position
+"z"    : layer   | 	0	|the draw order, (int) 0 means its drawn first, 1 is drawn second ... eg
+
+=============================================================================
+    ____________
+    |SpriteNode|
+   
+key    | value   |   default    | decription
+_________________|______________|
+"type" : "Sprite"|    "None"	|the type of Node
+"pos"  : [x,y]   |    [0,0]	|the position
+"z"    : layer   | 	0	|the draw order, (int) 0 means its drawn first, 1 is drawn second ... eg
+"image": "path"  | 	""	|the text to display
+
+=============================================================================
+    ____________
+    |ButtonNode|
+    
+key    | value   |   default    | decription
+_________________|______________|
+"type" : "Sprite"|    "None"	|the type of Node
+"pos"  : [x,y]   |    [0,0]	|the position
+"z"    : layer   | 	0	|the draw order, (int) 0 means its drawn first, 1 is drawn second ... eg
+"text" : "text"  | 	""	|the text to display
+
+
+coming soon
+
+text node
+
+events
+
+varibles
+
+more button atrabutes 
+
+
+
+
+
+
+
+
+
+

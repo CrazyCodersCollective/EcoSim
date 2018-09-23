@@ -24,7 +24,7 @@ bool ButtonNode::SetText(const std::string & text) {
 
 	SDL_Surface* textSurface;
 
-	textSurface = TTF_RenderUTF8_Blended(font.GetFont(), text.c_str(), SDL_Color{ 255,0,255,255 });
+	textSurface = TTF_RenderUTF8_Blended(font.GetFont(), text.c_str(), this->textColor);
 	if (textSurface == NULL)
 	{
 		printf("ERROR: Unable to render text surface! SDL_ttf Error: %s\n", TTF_GetError());
@@ -56,9 +56,9 @@ bool ButtonNode::SetText(const std::string & text) {
 			grad = SDL_CreateRGBSurface(0, 1, 2, 32, 0, 255, 0, 100);
 			//SDL_LockSurface(grad);
 			SDL_Rect r = {0, 0, 1, 1};
-			SDL_FillRect(grad, &r, SDL_MapRGB(grad->format, 255, 0, 255));
+			SDL_FillRect(grad, &r, SDL_MapRGB(grad->format, bgBottom.r, bgBottom.g, bgBottom.b));
 			r =  {0,1,1,1};
-			SDL_FillRect(grad, &r, SDL_MapRGB(grad->format, 0, 0, 255));
+			SDL_FillRect(grad, &r, SDL_MapRGB(grad->format, bgTop.r, bgTop.g, bgTop.b));
 			//SDL_FillRect(grad, &r, SDL_MapRGB(grad->format, 255, 0, 255));
 			//grad->pixels = 255; 
 

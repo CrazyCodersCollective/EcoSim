@@ -12,13 +12,6 @@ public:
 	~ButtonNode();
 	bool SetText(const std::string& text);
 	
-
-private:
-	// inherit texture
-	Font font;
-	std::string text;
-	SDL_Texture * UpTexture = nullptr;
-	SDL_Texture* DownTexture = nullptr;
 	int padx = 1;
 	int pady = 1;
 	int borderWidth = 1;
@@ -27,6 +20,13 @@ private:
 	SDL_Color bgBottom;
 	SDL_Color borderColour;
 	SDL_Color textColor;
+private:
+	// inherit texture
+	Font font;
+	std::string text;
+	SDL_Texture * UpTexture = nullptr;
+	SDL_Texture* DownTexture = nullptr;
+	
 
 };
 

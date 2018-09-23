@@ -83,11 +83,11 @@ void RootNode::ProssesNodes(Node* node, nlohmann::json j)
 		// the key (for objects)
 		//const char* kc = it.key().c_str();
 		std::string name = it.key();
-		std::string kc = val.begin().key();
+		std::string kc = val["type"];
 		if (kc == "Sprite")
-			ProssesSprite(node, val.begin().value());
+			ProssesSprite(node, val);
 		if (kc == "Button")
-			ProssesButton(node, val.begin().value());
+			ProssesButton(node, val);
 		printf(kc.c_str());
 	}
 }
@@ -125,7 +125,12 @@ void RootNode::ProssesButton(Node* node, nlohmann::json j) {
 	
 	nlohmann::json pos = j.value("pos", nlohmann::json::array({10,10}));
 	butt->SetPos(pos[0], pos[1]);
-	printf("buttin");
+	
+	nlohmann::json colour = j.value("bgTop", nlohmann::json::array({255,255,255,255}));
+	butt->bgTop = SDL_Color{ colour[0],colour[1] ,colour[2] ,colour[3] };
+	colour = j.value("bgBottom", nlohmann::json::array({ 240,240,240,255 }));
+	butt->bgBottom = SDL_Color{ colour[0],colour[1] ,colour[2] ,colour[3] };
+
 
 	//ProssesNodes(j.value("children", nlohmann::json::array()));
 	//j.value("fontfile", "Resource/Fonts/monogram.ttf");
@@ -134,8 +139,6 @@ void RootNode::ProssesButton(Node* node, nlohmann::json j) {
 	//j.value("pady", 28);
 	//j.value("borderWidth", 28);
 	//j.value("borderRad", 28);
-	//j.value("bgTop", 28);
-	//j.value("bgBottom", 28);
 	//j.value("borderColour", 28);
 	//j.value("textColor", 28);
 

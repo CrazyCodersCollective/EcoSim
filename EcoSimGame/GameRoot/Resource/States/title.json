@@ -2,22 +2,20 @@
 "name":"start",
 "Nodes":{
 	"test button":{
-		"Button":{
+			"type":"Button", 
 			"text":"test button",
-			"pos":[200, 200]
-		    	 }
-		      },
+			"pos":[300, 200]
+		       },
 	"backgroung":{
-		"Sprite":{
+			"type":"Sprite",
 			"image":"Resource/Textures/TitleScreen.png",
 			"pos":[0,0]
-			 }
+			 
 		      },
 	"test2 button":{
-		"Button":{
+			"type":"Button", 
 			"text":"test button",
-			"pos":[10, 100]
-			 }
-			}
+			"pos":[300, 300]
+		       }
 	}
 }
